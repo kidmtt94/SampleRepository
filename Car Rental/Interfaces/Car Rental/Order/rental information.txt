@@ -1,0 +1,32 @@
+INTERFACE ENTITY	rental information
+interface entity setting	title	Car Rental-Rental Information
+
+	ta name	ta class	caption
+interface element	home	button	Home
+interface element	back	button	Back
+interface element	next	button	Next
+
+	ta name	ta class	description
+interface element	adding service list	list	Rental Options
+
+	ta name	ta class	caption
+interface element	check lowest rate	radio button	Check lowest rate
+interface element	i have discount coupon	radio button	{I have a discount coupon.*}
+
+	ta name	ta class	description
+interface element	first name	text	First Name
+interface element	last name	text	Last Name
+interface element	driver license	text	Driver License
+interface element	passport	text	Passport
+interface element	phone number	text	Phone Number
+interface element	membership code	text	Membership Code
+interface element	discount counpon	text	Discount
+interface element	arc_ata	text	ARCIATA
+interface element	duration	text	Rental duration(days)
+interface element	total options charge	text	Total options charge
+interface element	number of car	text	Number of car to rent
+interface element	total car charge	text	Total car charge
+interface element	options charge per day	text	Options charge per day
+
+	ta name	ta class	value
+interface element	main menu	menu bar	FileAbout

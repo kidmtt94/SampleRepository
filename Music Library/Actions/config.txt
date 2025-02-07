@@ -1,0 +1,5 @@
+ACTION DEFINITION	config
+
+	setting	value
+setting	window wait	30
+setting	standard ASCII only	yes

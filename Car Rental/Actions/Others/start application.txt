@@ -1,0 +1,60 @@
+10kt9oenqd=car rental message
+10ktc203ic=yes
+ACTION DEFINITION	start application
+
+
+	window	variable	time out
+does window exist	[title={Car Rental.*}]	>>main window	1
+
+	condition
+if	# main window=1
+
+	window
+close window	[title={Car Rental.*}]
+
+	window	variable	time out
+does window exist	10kt9oenqd	>>message window	1
+
+	condition
+if	# message window=1
+
+	window	control
+click	10kt9oenqd	10ktc203ic
+
+end if
+
+	window	time out
+wait for window close	[title={Car Rental.*}]	10
+
+end if
+
+	setting	value
+setting	max show length	1000
+
+	file	variable
+does file exist	C:\Program Files\LogiGear\TestArchitect\samples\CarRental\CarRental.exe	i
+does file exist	C:\Program Files (x86)\LogiGear\TestArchitect\samples\CarRental\CarRental.exe	i2
+
+	condition
+if	#i=1
+
+	variable	value
+set variable	path	C:\Program Files\LogiGear\TestArchitect\samples\CarRental\CarRental.exe
+
+	condition
+else if	#i2=1
+
+	variable	value
+set variable	path	C:\Program Files (x86)\LogiGear\TestArchitect\samples\CarRental\CarRental.exe
+
+else
+
+	text
+report error	"The "Car Rental" sample application was not installed at its default location. Please open the “start application” high-level action, then correct the file path of your sample application accordingly."
+
+exit test module
+
+end if
+
+	program
+start program	#path

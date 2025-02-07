@@ -1,0 +1,19 @@
+INTERFACE ENTITY	library
+interface entity setting	title	{.*Music Library.*}
+
+	ta name	ta class	automation id
+interface element	main tab	tab control	tabControl
+
+	ta name	ta class	global pos
+interface element	main menu	menu bar	Menu 1
+
+	ta name	ta class	automation id
+interface element	title	textbox	TitleTextBox
+interface element	artist	textbox	SongArtistTextBox
+interface element	file size	textbox	SizeTextBox
+interface element	playing time	textbox	TimeTextBox
+interface element	file type	textbox	TypeTextBox
+interface element	bitrate	textbox	BitrateTextBox
+
+	ta name	ta class	global pos
+interface element	music	treeview	TreeView 1

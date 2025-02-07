@@ -1,0 +1,43 @@
+10ks2h5wpq=return country canada
+10krxpb0z=date and location
+10ks2hdycv=pickup country us
+10ks2hd1jm=pickup country canada
+ACTION DEFINITION	select country
+
+	name	default value	description	type	modifier
+argument	country		United States, Canada	Value Set	United States, Canada,*
+argument	type	Pickup	Pickup, Return	Value Set	Pickup, Return
+
+	condition
+if	# country = "United States"
+
+	condition
+if	# type="Pickup"
+
+	window	control
+click	10krxpb0z	10ks2hdycv
+
+else
+
+	window	control
+click	10krxpb0z	10ks2h5wpq
+
+end if
+
+	condition
+else if	# country = "Canada"
+
+	condition
+if	# type="Pickup"
+
+	window	control
+click	10krxpb0z	10ks2hd1jm
+
+else
+
+	window	control
+click	10krxpb0z	10ks2h5wpq
+
+end if
+
+end if

@@ -1,0 +1,21 @@
+10kt9oenqd=car rental message
+10ktc203ic=yes
+ACTION DEFINITION	close application
+
+	name	default value	description	type	modifier
+argument	window		The window name	Interface Entity
+
+
+	window	menu	item
+select menu item	# window	main menu	File->Close
+
+	window	variable
+does window exist	10kt9oenqd	>>message window
+
+	condition
+if	# message window=1
+
+	window	control
+click	10kt9oenqd	10ktc203ic
+
+end if

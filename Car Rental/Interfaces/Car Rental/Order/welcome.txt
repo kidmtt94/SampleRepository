@@ -1,0 +1,15 @@
+INTERFACE ENTITY	welcome
+interface entity setting	title	Car Rental-Welcome
+
+	ta name	ta class	description
+interface element	view cars	button	View Cars
+interface element	view orders	button	View Orders
+interface element	new order	button	New Order
+
+	ta name	ta class	value
+interface element	lbl view cars	label	View Cars
+interface element	lbl view orders	label	View Orders
+interface element	lbl new order	label	New Order
+
+	ta name	ta class	value
+interface element	main menu	menu bar	FileAbout

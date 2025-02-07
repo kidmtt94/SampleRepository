@@ -1,0 +1,27 @@
+10krphrvqi=welcome
+10ku4ocv3a=available car
+10ku4obim5=car select tree
+10ku4oen9f=home
+10kruc0zvd=view cars
+10ku2gm81f=view cars
+ACTION DEFINITION	get number of available cars
+
+	name	default value	description	type	modifier
+argument	car		The car name	Value Set	Compact/Pontiac Grand Am,Standard/Chevrolet Monte Carlo,Standard/Toyota Prius,Standard/Ford Mustang Coupe,Premium/Buick LeSabre,Mini Van/Chevrolet Uplander,*
+argument	return available cars		The number of return available cars
+
+
+	window	control
+click	10krphrvqi	10kruc0zvd
+
+	window	tree	node path
+click tree node	10ku2gm81f	10ku4obim5	# "Car Types/" & car
+
+	window	control	variable
+get	10ku2gm81f	10ku4ocv3a	>> tmp
+
+	variable	value
+set variable	# return available cars	# tmp
+
+	window	control
+click	10ku2gm81f	10ku4oen9f

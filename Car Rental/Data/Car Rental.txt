@@ -1,0 +1,8 @@
+DATA SET	Car Rental
+
+	duration	country pickup	state pickup	city pickup	return same location	country return	state return	city return	first name	last name	driven license	option charge	car types	number of cars
+row	3	Canada	British Columbia	Kamloops	off	Canada	Manitoba	Dauphin	John	Allen	999999	Infant Seat	Premium/Buick LeSabre	2
+row	1	United States	Texas	Houston	on	United States	Texas	Houston	Tom	Thomas	888888	Collision Damage Waiver Full	Standard/Pontiac Grand Am	2
+row	2	United States	Florida	Brossard	on	United States	Florida	Houston	Tom	Thomas	111111	GPS Navigation Device	Compact/Toyota Prius	2
+row	5	United States	California	San Diego	off	Canada	Quebec	Brossard	David	Baker	222222	Roadside Plus	Standard/Ford Mustang Coupe	3
+row	4	Canada	Manitoba	Dauphin	on	Canada	Manitoba	Dauphin	Tom	Thomas	333333	Child/toddler Seat	Minivan/Chevrolet Uplander	4

@@ -1,0 +1,10 @@
+INTERFACE ENTITY	car rental message
+interface entity setting	title	Car Rental
+
+	ta name	ta class	name
+interface element	message	label	OptionPane.label
+
+	ta name	ta class	caption
+interface element	ok	button	OK
+interface element	yes	button	Yes
+interface element	no	button	No

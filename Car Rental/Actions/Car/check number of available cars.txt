@@ -1,0 +1,24 @@
+10krphrvqi=welcome
+10ku4ocv3a=available car
+10ku4obim5=car select tree
+18guo8g73y=main menu
+10ku4oen9f=home
+10ku2gm81f=view cars
+ACTION DEFINITION	check number of available cars
+
+	name	default value	description	type	modifier
+argument	car		The car type name	Value Set	Compact/Pontiac Grand Am,Standard/Chevrolet Monte Carlo,Standard/Toyota Prius,Standard/Ford Mustang Coupe,Premium/Buick LeSabre,Mini Van/Chevrolet Uplander,*
+argument	currently available cars		The number of available car to rent	String
+
+
+	window	menu	item
+select menu item	10krphrvqi	18guo8g73y	File->View Cars
+
+	window	tree	node path
+click tree node	10ku2gm81f	10ku4obim5	# "Car Types/" & car
+
+	window	control	value
+check	10ku2gm81f	10ku4ocv3a	# currently available cars
+
+	window	control
+click	10ku2gm81f	10ku4oen9f

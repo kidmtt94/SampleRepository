@@ -1,0 +1,68 @@
+11kfzznvk2=artist
+11kfzzv0dj=file size
+11kfzzhyyu=search song
+1dgixxdgru=file size
+1st82s94oa=no results
+11gsg69chm=start application
+1dgip2fdha=title
+1st82smidu=library
+1dgikkwf7p=file type
+11kg5obdjn=bitrate
+1bqpsgfks1=method
+1dgibdcyip=check song information
+1dgikky7zn=bitrate
+18h6qnw268=config
+1st82siw3o=ok
+1dgkd0yjyb=row
+1dgbjzgs8=file type
+1dgikktaom=artist
+TEST MODULE	Search functional tests
+
+OBJECTIVES
+test objective	TO 03	Search functions properly via selecting the File | Search menu item
+test objective	TO 04	Search functions properly via the Search button in the Tool Bar
+test objective	TO 05	Search functions properly via the Search button in the Search tab	
+test objective	TO 06	No Results message displayed when there is no result yielded by a search
+
+INITIAL	Setting up
+
+18h6qnw268
+
+11gsg69chm
+
+TEST CASE	TC 01	Check the search function using all alternative methods for activating a search
+test objective	TO 03	Search functions properly via selecting the File | Search menu item
+test objective	TO 04	Search functions properly via the Search button in the Tool Bar
+test objective	TO 05	Search functions properly via the Search button in the Search tab	
+
+	window	tab	item
+select tab	1st82smidu	main tab	Search
+
+	11kfzznvk2	11kfzzv0dj	1bqpsgfks1
+11kfzzhyyu	Amy Winehouse	under 4000 Kb	Search menu
+
+	1dgikktaom	1dgip2fdha	1dgixxdgru	1dgkd0yjyb
+1dgibdcyip	Amy Winehouse	You Know Im No Good	3566	1
+
+	11kfzznvk2	11kfzzv0dj	1dgbjzgs8	11kg5obdjn	1bqpsgfks1
+11kfzzhyyu	Pink Floyd	4000 kb or larger	mp3	192 kbps	Search toolbar
+
+	1dgikktaom	1dgip2fdha	1dgixxdgru	1dgikkwf7p	1dgikky7zn	1dgkd0yjyb
+1dgibdcyip	Pink Floyd	Dark Side of the Moon	6114	mp3	192	1
+
+TEST CASE	TC 02	A search that yields no results
+test objective	TO 06	No Results message displayed when there is no result yielded by a search
+
+	11kfzznvk2	11kfzzv0dj	11kg5obdjn	1bqpsgfks1
+11kfzzhyyu	Mariah Carey	under 4000 Kb	112 kbps	Search button
+
+	window
+check window exists	1st82s94oa
+
+	window	control
+click	1st82s94oa	1st82siw3o
+
+FINAL	Cleaning up
+
+	window
+close window	1st82smidu

@@ -1,0 +1,22 @@
+10ktejc8ty=view orders
+10ktxwoxz0=no result found
+10ktxwwyur=search text
+10ktxws1hf=search
+ACTION DEFINITION	check order not exists
+
+	name	default value	description
+argument	current window		The window name
+argument	last name		The last name of customer
+
+
+	window	menu	item
+select menu item	# current window	main menu	File->View Orders
+
+	window	control	value
+enter	10ktejc8ty	10ktxwwyur	# last name
+
+	window	control
+click	10ktejc8ty	10ktxws1hf
+
+	window	control
+check control exists	10ktejc8ty	10ktxwoxz0

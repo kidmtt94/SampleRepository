@@ -1,0 +1,17 @@
+10kt9oenqd=car rental message
+10ktc203ic=yes
+ACTION DEFINITION	back to home
+
+	name	default value	description
+argument	current window
+
+	window	control
+click	# current window	Home
+
+	window
+if window exists	10kt9oenqd
+
+	window	control
+click	10kt9oenqd	10ktc203ic
+
+end if

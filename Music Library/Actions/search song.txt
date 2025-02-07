@@ -1,0 +1,86 @@
+1st82rqacv=main menu
+1st82rxggp=search toolbar
+1st82s33dy=mp3
+1st82r9c7i=bitrate value
+1st82rv2fr=search
+1st82rg5c9=acc
+1st82rsqwk=wma
+1st82qhdvh=search
+1st82rzr7s=artist field
+ACTION DEFINITION	search song
+
+	name	default value	description	type	modifier
+argument	artist		Artist filed value
+argument	file size		File size(Kb) value	Value Set	smaller 4000 Kb, equal or bigger 4000 Kb
+argument	file type		File types: mp3,wma,acc	Value Set	mp3,wma,acc,*
+argument	bitrate		Bitrate (Kbps) value
+argument	method	Search button	Search menu (File/Search), Search toolbar , Search button	Value Set	Search menu, Search toolbar , Search button,*
+
+
+	window	control	value
+enter	1st82qhdvh	1st82rzr7s	# artist
+
+	condition
+if	# file size <> ""
+
+	window	control	value
+set	1st82qhdvh	# file size	on
+
+end if
+
+	condition
+if	# file type <>""
+
+	condition
+if	# file type = "mp3"
+
+	window	control	value
+set	1st82qhdvh	1st82s33dy	on
+
+	condition
+else if	# file type = "wma"
+
+	window	control	value
+set	1st82qhdvh	1st82rsqwk	on
+
+	condition
+else if	# file type = "acc"
+
+	window	control	value
+set	1st82qhdvh	1st82rg5c9	on
+
+end if
+
+end if
+
+	condition
+if	# bitrate <> ""
+
+	window	control	value
+select	1st82qhdvh	1st82r9c7i	# bitrate
+
+end if
+
+	condition
+if	#method="Search button"
+
+	window	control
+click	1st82qhdvh	1st82rv2fr
+
+end if
+
+	condition
+if	#method="Search menu"
+
+	window	menu	item
+select menu item	1st82qhdvh	1st82rqacv	FILE->Search
+
+end if
+
+	condition
+if	#method="Search toolbar"
+
+	window	control
+click	1st82qhdvh	1st82rxggp
+
+end if

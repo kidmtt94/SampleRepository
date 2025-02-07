@@ -1,0 +1,11 @@
+1st82smidu=library
+1st82w37qp=music
+ACTION DEFINITION	select song
+
+	name	default value	description
+argument	artist
+argument	song
+
+
+	window	tree	node path
+click tree node	1st82smidu	1st82w37qp	# "Music/" & artist & "/" & song

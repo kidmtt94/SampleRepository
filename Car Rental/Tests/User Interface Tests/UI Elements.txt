@@ -1,0 +1,562 @@
+10ks2h8kmt=next
+10ks2h78z2=pickup state
+11n96f4tpd=first name
+10kt1q9dyu=home
+10kt4kq0e=email
+10ks2h2sge=return state
+10krkixhz9=clear
+10krphrvqi=welcome
+10ksq7acku=total car charge
+10ksq778q5=car charge per day
+10ksq73oks=back
+10kt1pxrqt=duration
+10kruc4jj=lbl view cars
+10ks7ciu8x=car selection
+10n5fi276w=fill rental information
+18guo8g73y=main menu
+10ku2gm81f=view cars
+10ktc21ftp=ok
+10krkizav6=lbl user name
+10kt4ku0im=total payment
+10ktxwwyur=search text
+10ktxwptpg=home
+10m1ji5bx7=select car
+10ks2hadwr=return city
+10kt4ky1kk=car rent number
+10ksq75w4=number of car
+10kt4ks8mv=back
+10ktxwuaqy=number of rental
+10ku4oa63o=car charge per day
+10ksq703x9=car select tree
+10ktxww2jz=tax
+10kt4koox1=finish
+10krkj3rx2=password
+10kt1pvint=number of car
+10kt1q4g9t=membership code
+10kt1punm4=adding service list
+10kruc5fah=view orders
+10ku4oen9f=home
+10ktxws1hf=search
+10kxz3595f=total options charge
+10kt3bbvk4=confirm reservation
+10n5xk0h14=start application
+10kt1q6p9v=driver license
+10kt4kqwcp=home
+10ktxwxvyw=car charge
+10ks2hc5gr=home
+10kt1qbmk=phone number
+10kt1qa9bm=next
+10ku4ocv3a=available car
+10ksq72rzq=next
+10kt4kvtev=total car charge
+10kt4m09b9=car charge per day
+10krkiydoy=lbl password
+10ks2hg6ti=return at same location
+10kt1pzj4y=total car charge
+10kruc3ov9=lbl view orders
+10ktxwtdu3=total charge
+10krxpb0z=date and location
+10n57ajeub=select date and location
+10ktc1yruj=message
+10ktxwnk1c=orders table
+10kt1q5t9a=back
+10ks2hied0=pickup date
+10kruc6beo=new order
+10ksq750xc=home
+10kt1q1bke=arc_ata
+10ks2h9ga7=pickup city
+10kt1ptrst=total options charge
+10ksq784h6=duration
+10ktejc8ty=view orders
+10kt4kt4g8=tax
+10krkj2ez7=user name
+10kt4kyxum=duration
+10kt1q28ap=i have discount coupon
+10kxz34dm0=options charge per day
+10kt1q3kop=check lowest rate
+10ks2h5098=return country us
+10ks2hd1jm=pickup country canada
+10n5md9ftj=login
+1b42otp83q=config
+10ks2hdycv=pickup country us
+10kssaf6tk=rental information
+10ksq790p8=available car
+10kt1q0f1d=discount counpon
+10ku4obim5=car select tree
+10ks2h5wpq=return country canada
+10kruc0zvd=view cars
+10ktxwv6m1=options charge
+10kt1qchwj=passport
+10kqhphkjf=login
+11n96f7xey=last name
+10kruc1vh=lbl new order
+10krkj0msh=login
+10kt1pwfpg=options charge per day
+10kt9oenqd=car rental message
+10ks2hh2k=return date
+TEST MODULE	UI Elements
+
+OBJECTIVES
+test objective	TO 20	Verify that the Login window and all controls exist
+test objective	TO 21	Verify that the Welcome window and all controls exist
+test objective	TO 22	Verify that the View Cars window and all controls exist
+test objective	TO 23	Verify that the View Orders window and all controls exist
+test objective	TO 24	Verify that the Date and Location window and all controls exist
+test objective	TO 25	Verify that the Car Selection window and all controls exist
+test objective	TO 26	Verify that the Rental Information window and all controls exist
+test objective	TO 27	Verify that the Confirm Your Reservation window and all controls exist
+test objective	TO 28	Verify that the Car Rental message window (for confirmation) and all controls exist
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+TEST CASE	TC 01	Check the Welcome window
+test objective	TO 21	Verify that the Welcome window and all controls exist
+
+10n5md9ftj
+
+	window
+check window exists	10krphrvqi
+
+	window	control
+check control exists	10krphrvqi	10kruc0zvd
+check control exists	10krphrvqi	10kruc5fah
+check control exists	10krphrvqi	10kruc6beo
+check control exists	10krphrvqi	10kruc4jj
+check control exists	10krphrvqi	10kruc3ov9
+check control exists	10krphrvqi	10kruc1vh
+
+TEST CASE	TC 02	Check the View Cars window
+test objective	TO 22	Verify that the View Cars window and all controls exist
+
+	window	control
+click	10krphrvqi	10kruc0zvd
+
+	window
+check window exists	10ku2gm81f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+	window	control
+check control exists	10ku2gm81f	10ku4obim5
+check control exists	10ku2gm81f	10ku4ocv3a
+check control exists	10ku2gm81f	10ku4oa63o
+check control exists	10ku2gm81f	10ku4oen9f
+
+
+
+
+
+
+
+
+
+
+
+
+
+	window	control
+click	10ku2gm81f	10ku4oen9f
+
+TEST CASE	TC 03	Check the View Orders window
+test objective	TO 23	Verify that the View Orders window and all controls exist
+
+	window	control
+click	10krphrvqi	10kruc5fah
+
+	window
+check window exists	10ktejc8ty
+
+	window	control
+check control exists	10ktejc8ty	10ktxwwyur
+check control exists	10ktejc8ty	10ktxws1hf
+check control exists	10ktejc8ty	10ktxwnk1c
+check control exists	10ktejc8ty	10ktxwuaqy
+check control exists	10ktejc8ty	10ktxwxvyw
+check control exists	10ktejc8ty	10ktxwv6m1
+check control exists	10ktejc8ty	10ktxww2jz
+check control exists	10ktejc8ty	10ktxwtdu3
+check control exists	10ktejc8ty	10ktxwptpg
+
+	window	control
+click	10ktejc8ty	10ktxwptpg
+
+TEST CASE	TC 04	Check the Date and Location window
+test objective	TO 24	Verify that the Date and Location window and all controls exist
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	window
+check window exists	10krxpb0z
+
+	window	control
+check control exists	10krxpb0z	10ks2hied0
+check control exists	10krxpb0z	10ks2hdycv
+check control exists	10krxpb0z	10ks2hd1jm
+check control exists	10krxpb0z	10ks2h78z2
+check control exists	10krxpb0z	10ks2h9ga7
+check control exists	10krxpb0z	10ks2hh2k
+check control exists	10krxpb0z	10ks2h5098
+check control exists	10krxpb0z	10ks2h5wpq
+check control exists	10krxpb0z	10ks2h2sge
+check control exists	10krxpb0z	10ks2hadwr
+check control exists	10krxpb0z	10ks2hg6ti
+check control exists	10krxpb0z	10ks2hc5gr
+check control exists	10krxpb0z	10ks2h8kmt
+
+TEST CASE	TC 05	Check the Car Selection window
+test objective	TO 25	Verify that the Car Selection window and all controls exist
+
+10n57ajeub
+
+	window
+check window exists	10ks7ciu8x
+
+	window	control
+check control exists	10ks7ciu8x	10ksq703x9
+check control exists	10ks7ciu8x	10ksq75w4
+check control exists	10ks7ciu8x	10ksq790p8
+check control exists	10ks7ciu8x	10ksq778q5
+check control exists	10ks7ciu8x	10ksq784h6
+check control exists	10ks7ciu8x	10ksq7acku
+check control exists	10ks7ciu8x	10ksq750xc
+check control exists	10ks7ciu8x	10ksq73oks
+check control exists	10ks7ciu8x	10ksq72rzq
+
+TEST CASE	TC 06	Check the Rental Information window
+test objective	TO 26	Verify that the Rental Information window and all controls exist
+
+10m1ji5bx7
+
+	window
+check window exists	10kssaf6tk
+
+	window	control
+check control exists	10kssaf6tk	11n96f4tpd
+check control exists	10kssaf6tk	11n96f7xey
+check control exists	10kssaf6tk	10kt1q6p9v
+check control exists	10kssaf6tk	10kt1qchwj
+check control exists	10kssaf6tk	10kt1qbmk
+check control exists	10kssaf6tk	10kt1q4g9t
+check control exists	10kssaf6tk	10kt1q3kop
+check control exists	10kssaf6tk	10kt1q28ap
+check control exists	10kssaf6tk	10kt1q0f1d
+check control exists	10kssaf6tk	10kt1q1bke
+check control exists	10kssaf6tk	10kt1punm4
+check control exists	10kssaf6tk	10kt1pvint
+check control exists	10kssaf6tk	10kt1pxrqt
+check control exists	10kssaf6tk	10kt1pzj4y
+check control exists	10kssaf6tk	10kt1pwfpg
+check control exists	10kssaf6tk	10kt1ptrst
+check control exists	10kssaf6tk	10kt1q9dyu
+check control exists	10kssaf6tk	10kt1q5t9a
+check control exists	10kssaf6tk	10kt1qa9bm
+
+TEST CASE	TC 07	Check the Confirm Reservation window
+test objective	TO 27	Verify that the Confirm Your Reservation window and all controls exist
+test objective	TO 28	Verify that the Car Rental message window (for confirmation) and all controls exist
+
+10n5fi276w
+
+	window
+check window exists	10kt3bbvk4
+
+	window	control
+check control exists	10kt3bbvk4	10kt4kyxum
+check control exists	10kt3bbvk4	10kt4ky1kk
+check control exists	10kt3bbvk4	10kxz34dm0
+check control exists	10kt3bbvk4	10kxz3595f
+check control exists	10kt3bbvk4	10kt4m09b9
+check control exists	10kt3bbvk4	10kt4kvtev
+check control exists	10kt3bbvk4	10kt4kt4g8
+check control exists	10kt3bbvk4	10kt4ku0im
+check control exists	10kt3bbvk4	10kt4kqwcp
+check control exists	10kt3bbvk4	10kt4ks8mv
+check control exists	10kt3bbvk4	10kt4koox1
+check control exists	10kt3bbvk4	10kt4kq0e
+
+	window	control
+click	10kt3bbvk4	10kt4koox1
+
+	window
+check window exists	10kt9oenqd
+
+	window	control
+check control exists	10kt9oenqd	10ktc1yruj
+check control exists	10kt9oenqd	10ktc21ftp
+
+	window	control
+click	10kt9oenqd	10ktc21ftp
+
+TEST CASE	TC 08	Check Car Rental Login window
+test objective	TO 20	Verify that the Login window and all controls exist
+
+	window	menu	item
+select menu item	10krphrvqi	18guo8g73y	File->Logout
+
+	window
+check window exists	10kqhphkjf
+
+	window	control
+check control exists	10kqhphkjf	10krkj2ez7
+check control exists	10kqhphkjf	10krkj3rx2
+check control exists	10kqhphkjf	10krkj0msh
+check control exists	10kqhphkjf	10krkixhz9
+check control exists	10kqhphkjf	10krkiydoy
+check control exists	10kqhphkjf	10krkizav6
+
+FINAL	Cleaning up
+
+	window
+close window	10kqhphkjf

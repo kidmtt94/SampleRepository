@@ -1,0 +1,172 @@
+11mz5ut95z=return country lbl
+11mz5v32tn=return state lbl
+10ks2h8kmt=next
+10ks2h78z2=pickup state
+10ks2hg6ti=return at same location
+10krxpb0z=date and location
+10ks2h2sge=return state
+10krphrvqi=welcome
+10ks2hied0=pickup date
+10kruc6beo=new order
+18guo8g73y=main menu
+11n502gws4=back to home
+11mz5vf3j5=return city lbl
+10ks2hadwr=return city
+10n52uv9em=window
+10m0armfru=control
+11n60wcyka=current window
+2vcggo9vr6=pickup city lbl
+10ks2h5098=return country us
+2vcggoazn3=pickup country lbl
+10ks2hd1jm=pickup country canada
+10n5md9ftj=login
+10m0arnb97=state
+1b42otp83q=config
+10ks2hdycv=pickup country us
+2vcggo83um=pickup date lbl
+2vcggoagsr=pickup state lbl
+10ks2h5wpq=return country canada
+10n52uutcy=close application
+10n5xk0h14=start application
+10ks2hc5gr=home
+10m09yzyjt=check control state
+11mz5uh4cy=return date lbl
+10m0arkjbb=window
+10ks2hh2k=return date
+TEST MODULE	UI Elements States
+
+OBJECTIVES
+test objective	TO 07	The default information is displayed correctly on the Date and Location window
+test objective	TO 08	Pick up states are displayed correctly
+test objective	TO 09	Return states are displayed correctly
+test objective	TO 10	Verify that all menu items exist
+test objective	TO 11	Label and caption are displayed on the Date and Location window
+test objective	TO 12	The state of controls of Return Location become disabled when selecting "Return car at the same location"
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	The default information is displayed correctly on the Date and Location window
+test objective	TO 07	The default information is displayed correctly on the Date and Location window
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	date and location	pickup country us	checked
+10m09yzyjt	date and location	pickup country canada	unchecked
+10m09yzyjt	date and location	return country us	checked
+10m09yzyjt	date and location	return country canada	unchecked
+10m09yzyjt	date and location	return at same location	checked
+
+	window	control	item1
+check selected items	date and location	pickup state	Alabama
+check selected items	date and location	return state	Alabama
+
+	window	control	value
+set	10krxpb0z	10ks2hd1jm	on
+
+	window	control	item1
+check selected items	date and location	pickup state	Alberta
+check selected items	date and location	return state	Alberta
+
+	window	control	property	variable
+get control property	10krxpb0z	10ks2hied0	value	var pickup date
+get control property	10krxpb0z	10ks2hh2k	value	var return date
+
+	value	expected
+check value	# var pickup date	#fd(today())
+check value	# var return date	#fd(today() + 1)
+
+	11n60wcyka
+11n502gws4	date and location
+
+TEST CASE	TC 02	Pickup and Return states are displayed correctly
+test objective	TO 08	Pick up states are displayed correctly
+test objective	TO 09	Return states are displayed correctly
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	window	list	item
+check item exists	10krxpb0z	10ks2h78z2	Alabama
+check item exists	10krxpb0z	10ks2h78z2	Missouri
+check item exists	10krxpb0z	10ks2h78z2	Wisconsin
+check item exists	10krxpb0z	10ks2h2sge	Alaska
+check item exists	10krxpb0z	10ks2h2sge	New Jersey
+check item exists	10krxpb0z	10ks2h2sge	Wyoming
+
+	window	control	value
+set	10krxpb0z	10ks2hd1jm	on
+
+	window	list	item
+check item exists	10krxpb0z	10ks2h78z2	Alberta
+check item exists	10krxpb0z	10ks2h78z2	Nova Scotia
+check item exists	10krxpb0z	10ks2h78z2	Yukon Territory
+check item exists	10krxpb0z	10ks2h2sge	British Columbia
+check item exists	10krxpb0z	10ks2h2sge	Northwest Territory
+check item exists	10krxpb0z	10ks2h2sge	Saskatchewan
+
+	11n60wcyka
+11n502gws4	date and location
+
+TEST CASE	TC 03	Verify all menu items exist
+test objective	TO 10	Verify that all menu items exist
+
+	window	menu	item
+check menu item exists	10krphrvqi	18guo8g73y	File->New Order
+check menu item exists	10krphrvqi	18guo8g73y	File->View Orders
+check menu item exists	10krphrvqi	18guo8g73y	File->View Cars
+check menu item exists	10krphrvqi	18guo8g73y	File->Logout
+check menu item exists	10krphrvqi	18guo8g73y	File->Close
+check menu item exists	10krphrvqi	18guo8g73y	About->About
+
+TEST CASE	TC 04	Check labels, captions in the Select Date and Location window
+test objective	TO 11	Label and caption are displayed on the Date and Location window
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	window	control	property	expected
+check control property	10krxpb0z	2vcggo83um	value	Pickup Date
+check control property	10krxpb0z	2vcggoazn3	value	Pickup Country
+check control property	10krxpb0z	2vcggoagsr	value	Pickup State
+check control property	10krxpb0z	2vcggo9vr6	value	Pickup City*
+check control property	10krxpb0z	11mz5uh4cy	value	Return Date
+check control property	10krxpb0z	11mz5ut95z	value	Return Country
+check control property	10krxpb0z	11mz5v32tn	value	Return State
+check control property	10krxpb0z	11mz5vf3j5	value	Return City*
+check control property	10krxpb0z	10ks2hdycv	caption	United States
+check control property	10krxpb0z	10ks2hd1jm	caption	Canada
+check control property	10krxpb0z	10ks2h5098	caption	United States
+check control property	10krxpb0z	10ks2h5wpq	caption	Canada
+check control property	10krxpb0z	10ks2hc5gr	caption	Home
+check control property	10krxpb0z	10ks2h8kmt	caption	Next
+
+	11n60wcyka
+11n502gws4	date and location
+
+TEST CASE	TC 05	The state of controls of Return Location become disabled when selecting "Return car at the same location"
+test objective	TO 12	The state of controls of Return Location become disabled when selecting "Return car at the same location"
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	window	control	value
+set	10krxpb0z	10ks2hg6ti	on
+
+	window	control	property	expected
+check control property	10krxpb0z	10ks2h5098	enabled	false
+check control property	10krxpb0z	10ks2h5wpq	enabled	false
+check control property	10krxpb0z	10ks2h2sge	enabled	false
+check control property	10krxpb0z	10ks2hadwr	enabled	false
+
+FINAL	Cleaning up
+
+	10n52uv9em
+10n52uutcy	10krxpb0z

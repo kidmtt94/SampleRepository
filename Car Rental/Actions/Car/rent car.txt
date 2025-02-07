@@ -1,0 +1,61 @@
+10krphrvqi=welcome
+10m1k6usdo=car
+10kt9oenqd=car rental message
+10n5b30dxr=city return
+11n1x4dnzs=last name
+10kt3bbvk4=confirm reservation
+10n5fi276w=fill rental information
+10n5b2ukis=duration
+10n5b2x91c=return same location
+11n1x4bujj=first name
+10n5fy98wz=driver license
+10n5fygtn5=rental option
+10kt4koox1=finish
+10n57ajeub=select date and location
+10n5b2zxcf=state return
+10kruc6beo=new order
+10ktc21ftp=ok
+10n5b2y5yb=country return
+10m1k6vovj=number of cars
+10m1ji5bx7=select car
+10n5b2vxdx=country pickup
+10n5b2wcsj=state pickup
+10n5b2wtcs=city pickup
+ACTION DEFINITION	rent car
+
+	name	default value	description	type	modifier
+argument	duration	1	The return car date - the pickup car date
+argument	country pickup	Canada	The country name	Value Set	United States, Canada,*
+argument	state pickup	Quebec	The state name
+argument	city pickup	Brossard	The city name
+argument	return same location	<ignore>	Value: yes/no to turn on/off the 'Return car at the same location' checkbox	Value Set	yes,no, *
+argument	country return	<ignore>	United States/Canada: The country name	Value Set	United States, Canada,*
+argument	state return	<ignore>	The state name
+argument	city return	<ignore>	The city name
+argument	first name	Peter	The first name value
+argument	last name	Lee	The last name value
+argument	driver license	123456	The driver license value
+argument	rental option	Infant Seat	The option service	Value Set	Greenhouse Gas Emissions Offset,Infant Seat,Child/toddler Seat,GPS Navigation Device,Collision Damage Waiver Full,Extended Protecttion,Roadside Plus,Return Fuel at any level,*
+argument	car	Compact/Toyota Prius	The car name	Value Set	Compact/Pontiac Grand Am,Standard/Chevrolet Monte Carlo,Standard/Toyota Prius,Standard/Ford Mustang Coupe,Premium/Buick LeSabre,Mini Van/Chevrolet Uplander,*
+argument	number of cars	1	The number of cars to rent
+argument	total payment		return the value of total payment after a rental reservation
+
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	10n5b2ukis	10n5b2vxdx	10n5b2wcsj	10n5b2wtcs	10n5b2x91c
+10n57ajeub	# duration	# country pickup	# state pickup	# city pickup	# return same location
+
+	10n5b2y5yb	10n5b2zxcf	10n5b30dxr
+>>>	# country return	# state return	# city return
+
+	10m1k6usdo	10m1k6vovj
+10m1ji5bx7	# car	# number of cars
+
+	11n1x4bujj	11n1x4dnzs	10n5fy98wz	10n5fygtn5
+10n5fi276w	# first name	# last name	# driver license	# rental option
+
+	window	control
+click	10kt3bbvk4	10kt4koox1
+click	10kt9oenqd	10ktc21ftp

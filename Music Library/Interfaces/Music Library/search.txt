@@ -1,0 +1,30 @@
+INTERFACE ENTITY	search
+interface entity setting	title	{.*Music Library.*}
+
+	ta name	ta class	automation id
+interface element	search toolbar	button	SearchTBButton
+interface element	search	button	SearchButton
+
+	ta name	ta class	automation id
+interface element	mp3	checkbox	mp3CheckBox
+interface element	wma	checkbox	wmaCheckBox
+interface element	acc	checkbox	accCheckBox
+
+	ta name	ta class	automation id
+interface element	bitrate value	combobox	BitrateComboBox
+
+	ta name	ta class	automation id
+interface element	songs list	listview	SongsListView
+
+	ta name	ta class	global pos
+interface element	main menu	menu bar	menu bar 1
+
+	ta name	ta class	automation id
+interface element	under 4000 kb	radio button	Smaller4KRadioButton
+interface element	4000 kb or larger	radio button	Larger4KRadioButton
+
+	ta name	ta class	automation id
+interface element	artist field	textbox	ArtistTextBox
+
+	ta name	ta class	automation id
+interface element	main tab	tab control	tabControl

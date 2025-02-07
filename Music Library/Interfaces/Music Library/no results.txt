@@ -1,0 +1,6 @@
+INTERFACE ENTITY	no results
+interface entity setting	title	No Results
+interface entity setting	use frames	no
+
+	ta name	ta class	automation id
+interface element	ok	button	OkButton

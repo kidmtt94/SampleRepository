@@ -1,0 +1,25 @@
+1st82w6d5=bitrate
+1st82vogxi=artist
+1st82smidu=library
+1st82vv6fk=playing time
+1st82vjkmz=file type
+1st82vr1j7=title
+1st82vzfq0=file size
+ACTION DEFINITION	check song tags
+
+	name	default value	description
+argument	title
+argument	artist
+argument	file size
+argument	playing time
+argument	file type
+argument	bitrate
+
+
+	window	control	value
+check	1st82smidu	1st82vr1j7	# title
+check	1st82smidu	1st82vogxi	# artist
+check	1st82smidu	1st82vzfq0	# file size
+check	1st82smidu	1st82vv6fk	# playing time
+check	1st82smidu	1st82vjkmz	# file type
+check	1st82smidu	1st82w6d5	# bitrate

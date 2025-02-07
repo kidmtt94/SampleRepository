@@ -1,0 +1,85 @@
+1ssyn50isg=expected value
+10m1awhhq5=driver license
+10m1a0z7kn=rent car
+10n5md9ftj=login
+10m1awacvy=city pickup
+1b42otp83q=config
+10jqnrkoxj=/Car Rental
+11n3ioacj0=search order
+10krphrvqi=welcome
+10m1aw7ob=country pickup
+11n8dfkyav=first name
+11n8dfnakz=last name
+10m1aw6bfx=duration
+10n52uutcy=close application
+10ktejc8ty=view orders
+10kruc5fah=view orders
+1sszgrsu50=field name
+10n5xk0h14=start application
+10m1aw9g7h=state pickup
+1ssyn4zcvj=check order information
+10n52uv9em=window
+11n3mia5c3=value
+TEST MODULE	Multiple Reservations
+
+OBJECTIVES
+test objective	TO 06	Verify that one customer can order many reservations successfully
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	One customer can order many reservations successfully
+test objective	TO 06	Verify that one customer can order many reservations successfully
+
+step	1. Place 3 new reservations	New reservations are placed
+
+	name	filter
+use data set	10jqnrkoxj	last name = "Thomas"
+
+	10m1aw6bfx	10m1aw7ob	10m1aw9g7h	10m1awacvy	11n8dfkyav	11n8dfnakz	10m1awhhq5
+10m1a0z7kn	# duration	# country pickup	# state pickup	# city pickup	# first name	# last name	# driven license
+
+repeat for data set
+
+step	2. Search new placed reservations	New placed reservations are found
+
+	window	control
+click	10krphrvqi	10kruc5fah
+
+	11n3mia5c3
+11n3ioacj0	Thomas
+
+	11n3mia5c3
+11n3ioacj0	Thomas222
+
+
+	variable	value
+set variable	data row	1
+
+	variable	value
+set variable	dtaw	2223
+
+
+	name	filter
+use data set	10jqnrkoxj	last name = "Thomas"
+
+	1sszgrsu50	1ssyn50isg
+1ssyn4zcvj	Last Name	# last name
+1ssyn4zcvj	Duration	# duration
+1ssyn4zcvj	Pickup State	# state pickup & "-" & country pickup
+1ssyn4zcvj	Return State	# state return & "-" & country return
+
+	variable	value
+set variable	data row	# data row + 1
+
+repeat for data set
+
+FINAL	Cleaning up
+
+	10n52uv9em
+10n52uutcy	10ktejc8ty

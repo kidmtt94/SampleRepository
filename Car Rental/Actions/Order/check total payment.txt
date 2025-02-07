@@ -1,0 +1,40 @@
+10krphrvqi=welcome
+10kruc5fah=view orders
+10ktejc8ty=view orders
+10ktxwtdu3=total charge
+10ktxwwyur=search text
+10ktxwptpg=home
+10ktxws1hf=search
+10ktxwr5x9=close
+ACTION DEFINITION	check total payment
+
+	name	default value	description
+argument	last name	Lee	optional, last name of customer who renting car
+argument	total charge		Expected value of total charge you want to check
+
+
+
+	window	control
+click	10krphrvqi	10kruc5fah
+
+	window	control	value
+enter	10ktejc8ty	10ktxwwyur	# last name
+
+	window	control
+click	10ktejc8ty	10ktxws1hf
+
+	window	control	value
+check	10ktejc8ty	10ktxwtdu3	# total charge
+
+	window	control
+if control exists	10ktejc8ty	10ktxwr5x9
+
+	window	control
+click	10ktejc8ty	10ktxwr5x9
+
+else
+
+	window	control
+click	10ktejc8ty	10ktxwptpg
+
+end if

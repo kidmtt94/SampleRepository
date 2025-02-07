@@ -1,0 +1,98 @@
+10krphrvqi=welcome
+10m0arnb97=state
+10ks2h8kmt=next
+10m0armfru=control
+10ks7ciu8x=car selection
+10m0arkjbb=window
+10ks2h9ga7=pickup city
+10n5xk0h14=start application
+10ks2hadwr=return city
+10n52uutcy=close application
+10kt1q6p9v=driver license
+10ks2hg6ti=return at same location
+10n5md9ftj=login
+10krxpb0z=date and location
+1b42otp83q=config
+10n52uv9em=window
+10kruc6beo=new order
+10ksq72rzq=next
+10m09yzyjt=check control state
+11n96f7xey=last name
+11n96f4tpd=first name
+10kssaf6tk=rental information
+TEST MODULE	Required Field Validation
+
+OBJECTIVES
+test objective	TO 18	Next button is disabled when one or more required fields are empty
+test objective	TO 19	Next button is enabled when all required fields are filled in
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	The Next button's (UI Control) Enable property is properply set (On/Off)
+test objective	TO 18	Next button is disabled when one or more required fields are empty
+test objective	TO 19	Next button is enabled when all required fields are filled in
+
+step	1. Check if Next button is disabled in Date and Location window	Next button is disabled
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	date and location	next	disabled
+
+	window	control	value
+enter	10krxpb0z	10ks2h9ga7	Benton
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	date and location	next	enabled
+
+	window	control	value
+set	10krxpb0z	10ks2hg6ti	off
+
+	window	control	value
+enter	10krxpb0z	10ks2hadwr	Anderson
+
+step	2. Check if Next button is enabled  in Date and Location window	Next button is enabled
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	date and location	next	enabled
+
+	window	control
+click	10krxpb0z	10ks2h8kmt
+click	10ks7ciu8x	10ksq72rzq
+
+step	3. Check if Next button is disabled in Rental Information window	Next button is disabled
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	disabled
+
+	window	control	value
+enter	10kssaf6tk	11n96f4tpd	Tom
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	disabled
+
+	window	control	value
+enter	10kssaf6tk	11n96f7xey	Thomas
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	disabled
+
+	window	control	value
+enter	10kssaf6tk	10kt1q6p9v	123456
+
+step	4. Check if Next button is enabled  in Rental Information window	Next button is enabled
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	enabled
+
+FINAL	Cleaning up
+
+	10n52uv9em
+10n52uutcy	10kssaf6tk

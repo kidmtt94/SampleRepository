@@ -1,0 +1,18 @@
+INTERFACE ENTITY	view cars
+interface entity setting	title	Car Rental-View Cars
+
+
+	ta name	ta class	description
+interface element	car select tree	tree	Tree Car Types
+
+	ta name	ta class	description
+interface element	available car	text	Currently available cars
+interface element	car charge per day	text	Car charge per day
+
+	ta name	ta class	caption
+interface element	close	push button	Close
+interface element	home	push button	Home
+
+
+	ta name	ta class	name
+interface element	car image	icon	car

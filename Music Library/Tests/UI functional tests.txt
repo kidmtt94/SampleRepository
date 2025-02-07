@@ -1,0 +1,62 @@
+11kdv47zvk=bitrate
+11kdtiygd7=select song
+11gsg69chm=start application
+1st82smidu=library
+1st82w37qp=music
+11kdv43iu2=title
+11kdv47i6b=file type
+18h6qnw268=config
+11kdv46n5d=file size
+11kdv473sm=playing time
+11kdtj0pax=artist
+11kdv44exv=artist
+11kdv42mw4=check song tags
+11kdtj1m55=song
+TEST MODULE	UI functional tests
+
+OBJECTIVES
+test objective	TO 01	Library Tree's expand & collapse UI functions work correctly
+test objective	TO 02	Correct song tags of the selected song are shown
+
+INITIAL	Setting up
+
+18h6qnw268
+
+11gsg69chm
+
+TEST CASE	TC 01	Check the expand & collapse UI features of the Library Tree
+test objective	TO 01	Library Tree's expand & collapse UI functions work correctly
+
+	window	control	node
+collapse tree node	1st82smidu	1st82w37qp	Music/Miles Davis
+collapse tree node	1st82smidu	1st82w37qp	Music/Diana Krall
+collapse tree node	1st82smidu	1st82w37qp	Music/Carrie Underwood
+
+	window	control	node	expected
+check tree node status	1st82smidu	1st82w37qp	Music/Miles Davis	collapsed
+check tree node status	1st82smidu	1st82w37qp	Music/Diana Krall	collapsed
+check tree node status	1st82smidu	1st82w37qp	Music/Carrie Underwood	collapsed
+
+	window	control	node
+expand tree node	1st82smidu	1st82w37qp	Music/Miles Davis
+expand tree node	1st82smidu	1st82w37qp	Music/Diana Krall
+expand tree node	1st82smidu	1st82w37qp	Music/Carrie Underwood
+
+	window	control	node	expected
+check tree node status	1st82smidu	1st82w37qp	Music/Miles Davis	expanded
+check tree node status	1st82smidu	1st82w37qp	Music/Diana Krall	expanded
+check tree node status	1st82smidu	1st82w37qp	Music/Carrie Underwood	expanded
+
+TEST CASE	TC 02	Check song tags of a selected song
+test objective	TO 02	Correct song tags of the selected song are shown
+
+	11kdtj0pax	11kdtj1m55
+11kdtiygd7	Bob Marley	I Shot the Sheriff
+
+	11kdv43iu2	11kdv44exv	11kdv46n5d	11kdv473sm	11kdv47i6b	11kdv47zvk
+11kdv42mw4	I Shot the Sheriff	Bob Marley	5678	5:19	mp3	192
+
+FINAL	Cleaning up
+
+	window
+close window	1st82smidu
