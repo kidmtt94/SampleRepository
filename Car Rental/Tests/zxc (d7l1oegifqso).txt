@@ -29,4 +29,4 @@ INITIAL	Setting up
 
 
 
-FINAL	Cleaning up
+FINAL	Clean up
