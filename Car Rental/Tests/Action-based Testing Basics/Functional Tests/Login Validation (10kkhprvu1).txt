@@ -1,0 +1,108 @@
+[SETTINGS]
+creation date=1282821706000
+description=Validate the login account(s)
+version=29
+priority=High
+status=Complete
+run status=Passed
+update date=1738725914470
+checksum file=1976700145
+rename history=1284742430000	11n5drk10	TC_CRR_AP03	TC 01	axe8xofkme1d	NEW
+1335007704000	10kkhprvu1	Login Validation	Login validation	axe8xofkl85g	NEW
+1344352456000	10kkhprvu1	Login validation	Login Validation	axe8xofksmks	NEW
+1344352457000	10kkhprvu1	Login Validation	Login validation	axe8xofkn8ms	NEW
+check out user=10jqkwto0
+check out machine=AGT212340
+revision=1738725914451
+1357903916042
+1347040704230
+1346862265889
+1346179791080
+1344352457000
+1344352456000
+1343657853000
+1342021665000
+1341935846000
+1341935422000
+1341930399000
+1335007716000
+1335007704000
+1335005499000
+1335005483000
+1334944051000
+1334943684000
+1334943646000
+1334943629000
+1334943568000
+1334943528000
+1334943387000
+1334943360000
+1332951181000
+1303738806000
+1299593047000
+1284742430000
+1282822748000
+1282821705000
+revision timestamp=1738725914451
+[SCRIPT]
+10m0ko4st9=message
+10n5myxxmo=username
+10m0ko3fek=window
+10m0jr2gdj=check message
+10n5xk0h14=start application
+10n5myz9ke=password
+10n5md9ftj=login
+1b42otp83q=config
+10m0ko642e=button
+10krphrvqi=welcome
+TEST MODULE	Login validation
+
+OBJECTIVES
+test objective	TO 16	Access is denied with expected message handling for an invalid login
+test objective	TO 17	Access is granted for a valid login
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+TEST CASE	TC 01	Invalid login (Access denied)
+test objective	TO 16	Access is denied with expected message handling for an invalid login
+
+step	1. Login with invalid password	Error message displayed
+
+	10n5myxxmo	10n5myz9ke
+10n5md9ftj	john	54321
+
+	10m0ko3fek	10m0ko4st9	10m0ko642e
+10m0jr2gdj	car rental message	Invalid UserName or Password.	ok
+
+step	2. Login with invalid user name	Error message displayed
+
+	10n5myxxmo	10n5myz9ke
+10n5md9ftj	noone
+
+	10m0ko3fek	10m0ko4st9	10m0ko642e
+10m0jr2gdj	car rental message	Invalid UserName or Password.	ok
+
+step	3. Login with invalid user name and password	Error message displayed
+
+	10n5myxxmo	10n5myz9ke
+10n5md9ftj	noone	nothing
+10n5md9ftj	none	nothing
+	10m0ko3fek	10m0ko4st9	10m0ko642e
+10m0jr2gdj	car rental message	Invalid UserName or Password.	ok
+
+TEST CASE	TC 02	Valid login (Access granted)
+test objective	TO 17	Access is granted for a valid login
+
+10n5md9ftj
+
+	window
+check window exists	10krphrvqi
+
+FINAL	Cleaning up
+
+	window
+close window	10krphrvqi

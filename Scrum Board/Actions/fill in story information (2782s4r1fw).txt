@@ -1,0 +1,88 @@
+[SETTINGS]
+creation date=1357920482000
+version=2
+status=New
+update date=1560410465181
+checksum file=2495613640
+revision=1560410465207
+1359373240927
+1359371992865
+revision timestamp=1560410465207
+[SCRIPT]
+27826q2hyc=spent
+27826pyzsd=user story
+27826q2u1a=assignee
+27826q1d8n=priority
+27826q5phy=title
+27826q41mf=estimate
+27826q1p3q=description
+27826q23a=component
+ACTION DEFINITION	fill in story information
+
+	name	default value	description	type	modifier
+argument	title			String
+argument	description			String
+argument	priority			String
+argument	component			String
+argument	estimate			String
+argument	spent			String
+argument	assignee			String
+
+	condition
+if	# title <>"ignore" and title <> ""
+
+	window	control	value
+enter	27826pyzsd	27826q5phy	#title
+
+end if
+
+	condition
+if	# description <>"ignore" and description <> ""
+
+	window	control	value
+enter	27826pyzsd	27826q1p3q	# description
+
+end if
+
+	condition
+if	# priority <> "ignore" and priority <> ""
+
+	window	control	value
+select	27826pyzsd	27826q1d8n	#priority
+
+end if
+
+	condition
+if	# component<>"ignore" and component<>""
+
+	window	control	value
+select	27826pyzsd	27826q23a	#component
+
+end if
+
+	condition
+if	# estimate <> "ignore" and estimate <>""
+
+	window	control	value
+enter	27826pyzsd	27826q41mf	# estimate
+
+end if
+
+	condition
+if	# spent <>"ignore" and spent <>""
+
+	window	control	value
+enter	27826pyzsd	27826q2hyc	# spent
+
+end if
+
+	window	control
+click	27826pyzsd	27826q2u1a
+
+	condition
+if	# assignee <>"ignore" and assignee <>""
+
+	window	control	value
+enter	27826pyzsd	27826q2u1a	# assignee
+
+end if

@@ -1,0 +1,17 @@
+[SETTINGS]
+creation date=1738822941330
+version=1
+status=New
+update date=1738822953038
+checksum file=2789888586
+revision=1738822953046
+1738822941361
+revision timestamp=1738822953046
+[SCRIPT]
+ACTION DEFINITION	hello
+
+
+
+
+	text
+report	2

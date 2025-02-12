@@ -1,0 +1,37 @@
+[SETTINGS]
+creation date=1282833575000
+description=There are two ways to open this window:
+1. Go to File->View Orders
+2. From Welcome window, click View Orders
+version=1
+status=Complete
+update date=1403088047000
+checksum file=1163241381
+title=Car Rental-View Orders
+revision=1403088047000
+revision timestamp=1403088047000
+[SCRIPT]
+INTERFACE ENTITY	view orders
+interface entity setting	title	Car Rental-View Orders
+
+	ta name	ta class	caption
+interface element	search	button	Search
+interface element	home	button	Home
+interface element	close	button	Close
+
+	ta name	ta class	value
+interface element	no result found	label	No result found
+
+	ta name	ta class	value
+interface element	main menu	menu bar	FileAbout
+
+	ta name	ta class	name
+interface element	orders table	table
+
+	ta name	ta class	description
+interface element	search text	textbox	Search
+interface element	number of rental	textbox	Number of Rental Cars
+interface element	car charge	textbox	Car Charge
+interface element	options charge	textbox	Options Charge
+interface element	tax	textbox	Tax
+interface element	total charge	textbox	Total Charge

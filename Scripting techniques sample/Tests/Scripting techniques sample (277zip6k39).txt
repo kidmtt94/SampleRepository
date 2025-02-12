@@ -1,0 +1,107 @@
+[SETTINGS]
+run status=Passed
+creation date=1344351588000
+version=3
+priority=Medium
+update date=1403088499000
+checksum file=3260918024
+revision=1403088499140
+1359370328499
+1359367128000
+revision timestamp=1403088499140
+[SCRIPT]
+2w0enpz7fy=duration
+2w0eo3seem=close application
+2w0enqnypb=city return
+2w0eo3ta2w=window
+2w0enqodtc=first name
+2w0enqmmy1=country return
+2w0enqj9wf=state pickup
+2w0eo3vrjt=start application
+2w0enqqx1q=rental option
+2w0enqsa5i=car
+2w0eoizb50=pickup state
+2w0eoivp87=new order
+2w0enqm2rd=return same location
+2w0eo3zmnh=current window
+2w0eoieit9=login
+2w0enqsq8j=number of cars
+2w0eoijggy=welcome
+2w0enqcvef=country pickup
+2w0eoiwboo=date and location
+2w0enqparo=last name
+2w0enqt4t9=total payment
+2w0enqkgha=city pickup
+2w0enqn36p=state return
+2w0enppyb6=rent car
+2w0eo3yfu0=back to home
+2w0enqpqvg=driver license
+TEST MODULE	Scripting techniques sample
+
+OBJECTIVES
+
+INITIAL	Setting up
+
+2w0eo3vrjt
+
+TEST CASE	TC 01	Sample of some scripting techniques
+
+
+section	Using dynamic control
+
+	window	control	value
+enter	2w0eoieit9	[ta class=textbox,description=User name]	john
+enter	2w0eoieit9	[ta class=password text,label=Password]
+
+	window	control
+click	2w0eoieit9	[ta class=button, caption=Login]
+
+	window
+check window exists	2w0eoijggy
+
+section	Using wildcard
+
+	window	control
+click	2w0eoijggy	2w0eoivp87
+
+	window	list	item
+click list item	2w0eoiwboo	2w0eoizb50	{.*lora.*}
+
+	2w0eo3zmnh
+2w0eo3yfu0	date and location
+
+	window
+check window exists	2w0eoijggy
+
+section	Using inline data set
+
+	variable	value
+set variable	total charge	0
+
+	name
+create data set	my car
+
+	duration	country pickup	state pickup	city pickup	return same location	country return	state return	city return	first name	last name	driven license	option charge	car types	number of cars
+row	3	Canada	British Columbia	Kamloops	no	Canada	Manitoba	Dauphin	John	Allen	999999	Infant Seat	Premium/Buick LeSabre	2
+row	1	United States	Texas	Houston	yes	<ignore>	<ignore>	<ignore>	Tom	Thomas	888888	Collision Damage Waiver Full	Standard/Pontiac Grand Am	2
+row	2	United States	Florida	Brossard	yes	<ignore>	<ignore>	<ignore>	Tom	Thomas	111111	GPS Navigation Device	Compact/Toyota Prius	2
+row	5	United States	California	San Diego	no	Canada	Quebec	Brossard	David	Baker	222222	Roadside Plus	Standard/Ford Mustang Coupe	3
+row	4	Canada	Manitoba	Dauphin	yes	<ignore>	<ignore>	<ignore>	Tom	Thomas	333333	Child/toddler Seat	Minivan/Chevrolet Uplander	4
+
+end create data set
+
+	name
+use data set	my car
+
+	2w0enpz7fy	2w0enqcvef	2w0enqj9wf	2w0enqkgha	2w0enqm2rd	2w0enqmmy1	2w0enqn36p	2w0enqnypb	2w0enqodtc	2w0enqparo	2w0enqpqvg	2w0enqqx1q	2w0enqsa5i	2w0enqsq8j	2w0enqt4t9
+2w0enppyb6	# duration	# country pickup	# state pickup	# city pickup	# return same location	# country return	# state return	# city return	# first name	# last name	# driven license	# option charge	# car types	# number of cars	>> total charge
+
+	text
+report	# "Total charge: " & total charge
+
+repeat for data set
+
+FINAL	Cleaning up
+
+	2w0eo3ta2w
+2w0eo3seem	2w0eoijggy

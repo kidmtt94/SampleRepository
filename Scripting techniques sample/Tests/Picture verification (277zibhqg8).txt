@@ -1,0 +1,51 @@
+[SETTINGS]
+creation date=1330597464000
+priority=Low
+status=New
+run status=Passed
+update date=1359367113000
+checksum file=3004242821
+version=1
+revision=1359367113000
+revision timestamp=1359367113000
+[SCRIPT]
+10krphrvqi=welcome
+1st8b3rrfo=car image
+10n52uutcy=close application
+10n5md9ftj=login
+1b42otp83q=config
+1st88b1ug=car name
+10n5xk0h14=start application
+11n502gws4=back to home
+10ku2gm81f=view cars
+1st88at4wo=view picture
+1st88b59rz=car type
+TEST MODULE	Picture verification
+
+OBJECTIVES
+test objective	TO 20	The displayed picture matches user's selection
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	The displayed picture corresponds to user's selection
+test objective	TO 20	The displayed picture matches user's selection
+
+	1st88b59rz	1st88b1ug
+1st88at4wo	Compact	Toyota Prius
+
+	window	control	name	question
+check picture	10ku2gm81f	1st8b3rrfo	Verify car image	Is this a Toyota Prius?
+
+	current window
+11n502gws4	view cars
+
+FINAL	Cleaning up
+
+	window
+10n52uutcy	10krphrvqi

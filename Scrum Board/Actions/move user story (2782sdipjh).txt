@@ -1,0 +1,47 @@
+[SETTINGS]
+creation date=1357643287000
+version=4
+status=New
+update date=1561608608134
+checksum file=3561362489
+revision=1561608608141
+1561542952938
+1561538221972
+1560410509430
+1359631285131
+1359630869985
+1359373241008
+1359372003631
+revision timestamp=1561608608141
+[SCRIPT]
+busfhj17ne6x=scrumboard
+ACTION DEFINITION	move user story
+
+	name	default value	description	type	modifier
+argument	card id
+argument	to			Value Set	to do, in progress, done
+
+	variable	value
+set variable	i	# instr(card id, " - ", 1)
+set variable	id	# right(card id, length(card id) - i - 2)
+
+	window	control
+scroll to view	busfhj17ne6x	lbl logo
+
+	window	control	property	variable
+get control property	busfhj17ne6x	# to	left	>> phase left
+
+	window	control	property	variable
+get control property	busfhj17ne6x	# to	width	>> phase width
+get control property	busfhj17ne6x	#"[ta class=span, xpath='//span[@class="&""""&"sID"&""""&" and contains(text(),"&""""&id&""""&")]']"	top	>> card top
+get control property	busfhj17ne6x	#"[ta class=span, xpath='//span[@class="&""""&"sID"&""""&" and contains(text(),"&""""&id&""""&")]']"	left	>> card left
+get control property	busfhj17ne6x	#"[ta class=span, xpath='//span[@class="&""""&"sID"&""""&" and contains(text(),"&""""&id&""""&")]']"	width	>> card width
+get control property	busfhj17ne6x	#"[ta class=span, xpath='//span[@class="&""""&"sID"&""""&" and contains(text(),"&""""&id&""""&")]']"	height	>> card height
+
+	window	property	variable
+get window property	busfhj17ne6x	left	>> window left
+get window property	busfhj17ne6x	top	>> window top
+
+
+	window	x1	y1	x2	y2	delay
+drag mouse	busfhj17ne6x	# card left + card width/2 - window left	# card top + card height/2 - window top	# phase left + phase width/2 - window left	# card top + card height/2- window top

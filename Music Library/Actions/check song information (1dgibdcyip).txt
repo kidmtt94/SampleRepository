@@ -1,0 +1,70 @@
+[SETTINGS]
+creation date=1306505799000
+status=Complete
+update date=1357903925000
+checksum file=1910252596
+description=Check the information of the song display on the Result listview
+version=9
+revision=1357903925361
+1306508870000
+1306508548000
+1306506790000
+1306506782000
+1306506722000
+1306506343000
+1306506194000
+1306505799000
+revision timestamp=1357903925361
+[SCRIPT]
+1st82qtr6w=songs list
+1st82qhdvh=search
+ACTION DEFINITION	check song information
+
+	name	default value	description
+argument	artist		Artist filed value
+argument	title		Title field
+argument	file size		File size of the song
+argument	file type		File types: mp3,wma,acc
+argument	bitrate		Bitrate (Kbps) value
+argument	row		Start from 1
+
+
+	condition
+if	#title<>""
+
+	window	list	item	column	expected
+check list cell value	1st82qhdvh	1st82qtr6w	#row	1	#title
+
+end if
+
+	condition
+if	#artist<>""
+
+	window	list	item	column	expected
+check list cell value	1st82qhdvh	1st82qtr6w	#row	2	#artist
+
+end if
+
+	condition
+if	#file size<>""
+
+	window	list	item	column	expected
+check list cell value	1st82qhdvh	1st82qtr6w	#row	3	#file size
+
+end if
+
+	condition
+if	#file type<>""
+
+	window	list	item	column	expected
+check list cell value	1st82qhdvh	1st82qtr6w	#row	5	#file type
+
+end if
+
+	condition
+if	#bitrate<>""
+
+	window	list	item	column	expected
+check list cell value	1st82qhdvh	1st82qtr6w	#row	6	#bitrate
+
+end if

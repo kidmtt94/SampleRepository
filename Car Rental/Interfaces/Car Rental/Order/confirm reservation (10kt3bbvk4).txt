@@ -1,0 +1,37 @@
+[SETTINGS]
+creation date=1282833094000
+description=Make a new order and go to step 4
+version=6
+status=Complete
+update date=1402304548000
+checksum file=1381486240
+title=Car Rental-Confirm Your Reservation
+revision=1346948302605
+1306250095000
+1297770113000
+1282840421000
+1282833153000
+1282833099000
+revision timestamp=1346948302605
+[SCRIPT]
+INTERFACE ENTITY	confirm reservation
+interface entity setting	title	Car Rental-Confirm Your Reservation
+
+	ta name	ta class	description
+interface element	duration	label	Your Rental Duration
+interface element	car rent number	label	Car Rent Number
+interface element	options charge per day	label	Options Charge Per Day
+interface element	total options charge	label	Total Options Charge
+interface element	car charge per day	label	Car Charge Per Day
+interface element	total car charge	label	Total Car Charge
+interface element	tax	label	Tax
+interface element	total payment	label	Total Payment
+
+	ta name	ta class	caption
+interface element	home	button	Home
+interface element	back	button	Back
+interface element	finish	button	Finish
+interface element	email	button	Email
+
+	ta name	ta class	value
+interface element	main menu	menu bar	FileAbout

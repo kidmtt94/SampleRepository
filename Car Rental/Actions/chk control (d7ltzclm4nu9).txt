@@ -1,0 +1,16 @@
+[SETTINGS]
+check out user=10jqkwto0
+check out machine=AGT212340
+creation date=1738892600525
+version=1
+status=New
+update date=1738892600550
+checksum file=3621456361
+revision=1738892600558
+revision timestamp=1738892600558
+[SCRIPT]
+ACTION DEFINITION	chk control
+
+	name	default value	description	type	modifier
+argument	win			Interface Entity		
+argument	element			Interface Element		

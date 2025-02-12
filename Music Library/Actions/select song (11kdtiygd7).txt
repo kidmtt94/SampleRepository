@@ -1,0 +1,22 @@
+[SETTINGS]
+creation date=1284649931000
+version=3
+status=Complete
+update date=1357903925000
+checksum file=82040873
+revision=1357903925080
+1284655456000
+1284649932000
+revision timestamp=1357903925080
+[SCRIPT]
+1st82smidu=library
+1st82w37qp=music
+ACTION DEFINITION	select song
+
+	name	default value	description
+argument	artist
+argument	song
+
+
+	window	tree	node path
+click tree node	1st82smidu	1st82w37qp	# "Music/" & artist & "/" & song

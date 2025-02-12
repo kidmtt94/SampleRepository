@@ -1,0 +1,29 @@
+[SETTINGS]
+creation date=1282845793000
+description=Select a car
+version=1
+status=Complete
+update date=1403088011000
+checksum file=3304972091
+revision=1403088011000
+revision timestamp=1403088011000
+[SCRIPT]
+10ksq75w4=number of car
+10ks7ciu8x=car selection
+10ksq703x9=car select tree
+10ksq72rzq=next
+ACTION DEFINITION	select car
+
+	name	default value	description
+argument	car	Compact/Toyota Prius	The car name
+argument	number of cars	1	The number of cars to rent
+
+
+	window	tree	node path
+click tree node	10ks7ciu8x	10ksq703x9	# "Car Types/" & car
+
+	window	control	value
+enter	10ks7ciu8x	10ksq75w4	# number of cars
+
+	window	control
+click	10ks7ciu8x	10ksq72rzq

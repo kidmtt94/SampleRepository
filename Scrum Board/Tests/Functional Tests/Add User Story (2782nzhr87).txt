@@ -1,0 +1,77 @@
+[SETTINGS]
+creation date=1357552153000
+version=3
+priority=Medium
+status=Complete
+update date=1362355200000
+checksum file=1396243268
+run status=Passed
+recent duration=58000
+revision=1361800159859
+1359373232385
+1359371814987
+revision timestamp=1361800159859
+[SCRIPT]
+2782qkugq8=id
+2782s7yhbe=login
+2782qgx4et=add user story
+2782qgyysm=title
+2782qh0fs1=component
+2782s809n7=username
+2782qh1okk=assignee
+2782qm3hun=button
+2782qm2he=status
+2782qkx8he=estimate
+2782skkrpa=start scrumboard
+2782qgzgeg=description
+2782qksmqt=check user story detail
+2782qh0wkb=estimate
+2782qh22x5=button
+2782qkws1a=component
+2782qrpb3n=close scrumboard
+2782s80sj2=password
+2782qkvc9u=description
+2782qkxjxk=spent
+2782qkxxqb=assignee
+2782qp6upv=check user story not exists
+2782qgzuhb=priority
+2782qkvuyk=priority
+2782qttono=config
+2782qkuzgv=title
+2782qh1bex=spent
+TEST MODULE	Add User Story
+
+OBJECTIVES
+test objective	TO 01	New user story can be created sucessfully
+test objective	TO 02	User story creation can be canceled by clicking on Cancel button on "New Story" form
+
+INITIAL	Setting up
+
+2782qttono
+
+2782skkrpa
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	John	tester
+
+TEST CASE	Add 001	Verify new card can be created
+test objective	TO 01	New user story can be created sucessfully
+
+	2782qgyysm	2782qgzgeg	2782qgzuhb	2782qh0fs1	2782qh0wkb	2782qh1bex	2782qh1okk	2782qh22x5
+2782qgx4et	Help	Function for user to view Help	Medium	Function	10	0	John	create
+
+	2782qkugq8	2782qkuzgv	2782qkvc9u	2782qkvuyk	2782qkws1a	2782qkx8he	2782qkxjxk	2782qkxxqb	2782qm2he	2782qm3hun
+2782qksmqt	Car - 9	Help	Function for user to view Help	Medium	Function	10	0	John	To Do	close
+
+TEST CASE	Add 002	Verify card creation can be canceled
+test objective	TO 02	User story creation can be canceled by clicking on Cancel button on "New Story" form
+
+	2782qgyysm	2782qgzgeg	2782qgzuhb	2782qh0fs1	2782qh0wkb	2782qh1bex	2782qh1okk	2782qh22x5
+2782qgx4et	"Cancel Order" function	Design UI and functional for all required steps to cancel a order.	Medium	Function	2	0	Peter	cancel
+
+	id
+2782qp6upv	Car - 10
+
+FINAL	Cleaning up
+
+2782qrpb3n

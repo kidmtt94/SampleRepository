@@ -1,0 +1,28 @@
+[SETTINGS]
+creation date=1357556133000
+version=1
+status=New
+update date=1359372000000
+checksum file=3900833829
+revision=1359372000584
+revision timestamp=1359372000584
+[SCRIPT]
+26kgbiujht=password
+26kgbiri4q=username
+26kgbithfg=login
+26dh2w4py0=login
+ACTION DEFINITION	login {spanish}
+
+	name	default value	description	type	modifier
+argument	username			String
+argument	password			String
+
+	window	control
+click	26dh2w4py0	spanish
+
+	window	control	value
+enter	26dh2w4py0	26kgbiri4q	#username
+enter	26dh2w4py0	26kgbiujht	#password
+
+	window	control
+click	26dh2w4py0	26kgbithfg

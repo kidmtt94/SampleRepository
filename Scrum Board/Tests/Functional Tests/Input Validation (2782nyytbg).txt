@@ -1,0 +1,94 @@
+[SETTINGS]
+creation date=1358173622000
+version=2
+priority=Medium
+status=New
+update date=1361800190000
+checksum file=3849350890
+run status=Passed
+recent duration=33000
+revision=1361800190340
+1359371814283
+revision timestamp=1361800190340
+[SCRIPT]
+2782s7yhbe=login
+2782qgx4et=add user story
+2782qgyysm=title
+2782s4t4tq=title
+2782qh0fs1=component
+2782s809n7=username
+2782qh1okk=assignee
+27826pyzsd=user story
+2782s4ty39=priority
+2782s4vguw=assignee
+2782s4tkch=description
+2782skkrpa=start scrumboard
+2782qgzgeg=description
+2782qh0wkb=estimate
+2782s4un78=estimate
+27826q3okr=invalid estimate warning
+2782qh22x5=button
+2782s4r1fw=fill in story information
+2782qrpb3n=close scrumboard
+2782s80sj2=password
+2782s4ua7t=component
+2782s4v2n7=spent
+27826q39if=invalid spent warning
+2782qgzuhb=priority
+2782qttono=config
+27826q0v1w=missing title warning
+2782qh1bex=spent
+TEST MODULE	Input Validation
+
+OBJECTIVES
+test objective	TO 07	Title is required field
+test objective	TO 08	Estimate field must be a positive number
+test objective	TO 09	Spent field must be a positive number
+
+INITIAL	Setting up
+
+2782qttono
+
+2782skkrpa
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	John	tester
+
+TEST CASE	TC 01	Verify "New Story" form data validation
+test objective	TO 07	Title is required field
+test objective	TO 08	Estimate field must be a positive number
+test objective	TO 09	Spent field must be a positive number
+
+	2782qgyysm	2782qgzgeg	2782qgzuhb	2782qh0fs1	2782qh0wkb	2782qh1bex	2782qh1okk	2782qh22x5
+2782qgx4et	ignore	ignore	ignore	ignore	ignore	ignore	ignore	create
+
+	window	control	value
+check	27826pyzsd	27826q0v1w	Title is required
+
+	2782s4t4tq	2782s4tkch	2782s4ty39	2782s4ua7t	2782s4un78	2782s4v2n7	2782s4vguw
+2782s4r1fw	Help	Function for user to view Help	Medium	Function	ten hours	one hour	John
+
+	window	control
+check control not exists	27826pyzsd	27826q0v1w
+
+	window	control	value
+check	27826pyzsd	27826q39if	Time Spent is integer number
+check	27826pyzsd	27826q3okr	Estimate is integer number
+
+	2782s4un78	2782s4v2n7
+2782s4r1fw	-10	-1
+
+	window	control	value
+check	27826pyzsd	27826q39if	Time Spent is greater than or equal 0
+check	27826pyzsd	27826q3okr	Estimate is greater than or equal 0 and less than 40
+
+	2782s4un78	2782s4v2n7
+2782s4r1fw	10	1
+
+	window	control
+check control not exists	27826pyzsd	27826q3okr
+check control not exists	27826pyzsd	27826q39if
+
+FINAL	Cleaning up
+
+2782qrpb3n

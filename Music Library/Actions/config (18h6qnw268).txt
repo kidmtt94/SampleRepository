@@ -1,0 +1,20 @@
+[SETTINGS]
+creation date=1297349597000
+status=New
+update date=1589450985586
+checksum file=3473066256
+version=6
+revision=1589450985685
+1348052950453
+1342084244000
+1306421156000
+1297771932000
+1297350098000
+1297349597000
+revision timestamp=1589450985685
+[SCRIPT]
+ACTION DEFINITION	config
+
+	setting	value
+setting	window wait	30
+setting	standard ASCII only	yes

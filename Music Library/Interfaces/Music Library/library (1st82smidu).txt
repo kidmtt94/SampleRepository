@@ -1,0 +1,33 @@
+[SETTINGS]
+creation date=1284397911000
+version=5
+status=Complete
+update date=1346866451000
+title={.*Music Library.*}
+checksum file=3124557958
+revision=1346866451188
+1346146941153
+1346146668974
+1334157631000
+1332856396000
+revision timestamp=1346866451188
+[SCRIPT]
+INTERFACE ENTITY	library
+interface entity setting	title	{.*Music Library.*}
+
+	ta name	ta class	automation id
+interface element	main tab	tab control	tabControl
+
+	ta name	ta class	global pos
+interface element	main menu	menu bar	Menu 1
+
+	ta name	ta class	automation id
+interface element	title	textbox	TitleTextBox
+interface element	artist	textbox	SongArtistTextBox
+interface element	file size	textbox	SizeTextBox
+interface element	playing time	textbox	TimeTextBox
+interface element	file type	textbox	TypeTextBox
+interface element	bitrate	textbox	BitrateTextBox
+
+	ta name	ta class	global pos
+interface element	music	treeview	TreeView 1

@@ -1,0 +1,35 @@
+[SETTINGS]
+creation date=1358865652000
+version=1
+status=New
+update date=1359372007000
+checksum file=3462325714
+revision=1359372007017
+revision timestamp=1359372007017
+[SCRIPT]
+ACTION DEFINITION	setup sample data
+
+	variable	value
+set variable	sample card title	Help
+set variable	sample card description	Function for user to view Help
+set variable	sample card priority	Medium
+set variable	sample card component	Function
+set variable	sample card estimate	10
+set variable	sample card spent	0
+set variable	sample card assignee	John
+
+	variable	value
+set variable	dummy title	"Cancel Order" function
+set variable	dummy description	Design UI and functional for all required steps to cancel a order.
+set variable	dummy priority	Medium
+set variable	dummy component	Function
+set variable	dummy estimate	2
+set variable	dummy spent	0
+set variable	dummy assignee	Peter
+
+	variable	value
+set variable	updated priority	High
+set variable	updated component	User Interface
+set variable	done status	Done
+set variable	to do status	To Do
+set variable	in progress status	In progress

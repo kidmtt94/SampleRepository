@@ -1,0 +1,36 @@
+[SETTINGS]
+creation date=1282834558000
+version=5
+status=Complete
+update date=1704870982777
+checksum file=2052366763
+description=There are two ways to open this window:
+1. Go to File->View Cars
+2. From Welcome window, click View Cars
+title=Car Rental-View Cars
+revision=1704870982794
+1346948346935
+1332856752000
+1306250185000
+1282834657000
+1282834563000
+revision timestamp=1704870982794
+[SCRIPT]
+INTERFACE ENTITY	view cars
+interface entity setting	title	Car Rental-View Cars
+
+
+	ta name	ta class	description
+interface element	car select tree	tree	Tree Car Types
+
+	ta name	ta class	description
+interface element	available car	text	Currently available cars
+interface element	car charge per day	text	Car charge per day
+
+	ta name	ta class	caption
+interface element	close	push button	Close
+interface element	home	push button	Home
+
+
+	ta name	ta class	name
+interface element	car image	icon	car

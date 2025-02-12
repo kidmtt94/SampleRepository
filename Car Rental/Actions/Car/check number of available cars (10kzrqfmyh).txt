@@ -1,0 +1,47 @@
+[SETTINGS]
+creation date=1282843101000
+version=12
+status=Complete
+update date=1402302221000
+checksum file=1082636894
+description=Verify the number of currently available cars
+rename history=1282906753000	10kzrqfmyh	check available cars o	check available cars	axe8xofkmxqg	NEW
+1344356811000	10kzrqfmyh	check available cars	check number of available cars	axe8xofkzziw	NEW
+revision=1357903917278
+1344356811000
+1297331565000
+1297331014000
+1284751844000
+1284665326000
+1282906753000
+1282843405000
+1282843390000
+1282843367000
+1282843148000
+1282843108000
+revision timestamp=1357903917278
+[SCRIPT]
+10krphrvqi=welcome
+10ku4ocv3a=available car
+10ku4obim5=car select tree
+18guo8g73y=main menu
+10ku4oen9f=home
+10ku2gm81f=view cars
+ACTION DEFINITION	check number of available cars
+
+	name	default value	description	type	modifier
+argument	car		The car type name	Value Set	Compact/Pontiac Grand Am,Standard/Chevrolet Monte Carlo,Standard/Toyota Prius,Standard/Ford Mustang Coupe,Premium/Buick LeSabre,Mini Van/Chevrolet Uplander,*
+argument	currently available cars		The number of available car to rent	String
+
+
+	window	menu	item
+select menu item	10krphrvqi	18guo8g73y	File->View Cars
+
+	window	tree	node path
+click tree node	10ku2gm81f	10ku4obim5	# "Car Types/" & car
+
+	window	control	value
+check	10ku2gm81f	10ku4ocv3a	# currently available cars
+
+	window	control
+click	10ku2gm81f	10ku4oen9f

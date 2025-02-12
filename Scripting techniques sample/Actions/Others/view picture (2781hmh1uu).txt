@@ -1,0 +1,29 @@
+[SETTINGS]
+creation date=1330597880000
+status=New
+update date=1403088032000
+checksum file=1740851043
+version=1
+revision=1359370083000
+revision timestamp=1359370083000
+[SCRIPT]
+10krphrvqi=welcome
+10ku4obim5=car select tree
+10kruc0zvd=view cars
+10ku2gm81f=view cars
+ACTION DEFINITION	view picture
+
+	name	default value	description
+argument	car type
+argument	car name
+
+
+
+	window	control
+click	10krphrvqi	10kruc0zvd
+
+	window	control	node
+expand tree node	10ku2gm81f	10ku4obim5	# "Car Types/" & car type
+
+	window	tree	node path
+click tree node	10ku2gm81f	10ku4obim5	# "Car Types/" & car type & "/" & car name

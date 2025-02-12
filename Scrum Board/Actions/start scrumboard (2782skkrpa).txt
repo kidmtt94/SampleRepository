@@ -1,0 +1,60 @@
+[SETTINGS]
+creation date=1357664341000
+version=5
+status=New
+update date=1491360964078
+checksum file=2597554599
+revision=1491360964154
+1403104040497
+1402754574056
+1359544961116
+1359455226324
+1359372012422
+revision timestamp=1491360964154
+[SCRIPT]
+27826qb32s=login
+ACTION DEFINITION	start scrumboard
+
+
+	file	variable
+does file exist	C:\Program Files\LogiGear\TestArchitect\samples\ScrumBoard\login.html	i
+does file exist	C:\Program Files (x86)\LogiGear\TestArchitect\samples\ScrumBoard\login.html	i2
+
+	condition
+if	#i=1
+
+	variable	value
+set variable	cf address link	file:///C:/Program Files/LogiGear/TestArchitect/samples/ScrumBoard/login.html
+
+	condition
+else if	#i2=1
+
+	variable	value
+set variable	cf address link	file:///C:/Program Files (x86)/LogiGear/TestArchitect/samples/ScrumBoard/login.html
+
+else
+
+	text
+report error	"The "ScrumBoard" sample application was not installed at its default location. Please open the “start scrumboard” high-level action, then correct the file path of your sample application accordingly."
+
+exit test module
+
+end if
+
+
+	window
+if window exists	[title={.*Scrum Board.*}]
+
+	window
+close window	[title={.*Scrum Board.*}]
+
+	window	time out
+wait for window close	[title={.*Scrum Board.*}]	30
+
+end if
+
+	location
+navigate	# cf address link
+
+	window
+maximize	27826qb32s

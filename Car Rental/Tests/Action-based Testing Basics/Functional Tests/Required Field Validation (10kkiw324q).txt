@@ -1,0 +1,151 @@
+[SETTINGS]
+creation date=1282821756000
+description=The state of 'Next' button will become enabled if entering all required field(s)
+version=37
+priority=High
+status=Complete
+run status=Passed
+update date=1401893476000
+checksum file=3695004262
+rename history=1284742549000	11n5gsmq0	TC_CRR_AP05	TC 01	axe8xofl2laf	NEW
+1334945750000	10kkiw324q	Required Fields	Enable property is set condiionally set correctly for the Next button	axe8xofkpega	NEW
+1334945825000	10kkiw324q	Enable property is set condiionally set correctly for the Next button	Condiiona handling of the Next button's Enable property	axe8xofkoau3	NEW
+1334945845000	10kkiw324q	Condiiona handling of the Next button's Enable property	Conditional handling of the Next button's Enable property	axe8xofl15rn	NEW
+1344352676000	10kkiw324q	Conditional handling of the Next button's Enable property	Required Field Validation	axe8xofkrmq9	NEW
+revision=1401893476714
+1401893344018
+1357903916276
+1347040726460
+1346179791270
+1344421483000
+1344352676000
+1343924953000
+1343924623000
+1343924586000
+1341933106000
+1341930397000
+1334946453000
+1334946043000
+1334946026000
+1334946003000
+1334945946000
+1334945845000
+1334945825000
+1334945750000
+1334945313000
+1334945269000
+1334945149000
+1334945117000
+1334945073000
+1334945061000
+1334945036000
+1334945014000
+1334944947000
+1334944876000
+1332859273000
+1306838142000
+1303739419000
+1299593060000
+1284742549000
+1282822772000
+1282821756000
+revision timestamp=1401893476714
+[SCRIPT]
+10krphrvqi=welcome
+10m0arnb97=state
+10ks2h8kmt=next
+10m0armfru=control
+10ks7ciu8x=car selection
+10m0arkjbb=window
+10ks2h9ga7=pickup city
+10n5xk0h14=start application
+10ks2hadwr=return city
+10n52uutcy=close application
+10kt1q6p9v=driver license
+10ks2hg6ti=return at same location
+10n5md9ftj=login
+10krxpb0z=date and location
+1b42otp83q=config
+10n52uv9em=window
+10kruc6beo=new order
+10ksq72rzq=next
+10m09yzyjt=check control state
+11n96f7xey=last name
+11n96f4tpd=first name
+10kssaf6tk=rental information
+TEST MODULE	Required Field Validation
+
+OBJECTIVES
+test objective	TO 18	Next button is disabled when one or more required fields are empty
+test objective	TO 19	Next button is enabled when all required fields are filled in
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	The Next button's (UI Control) Enable property is properply set (On/Off)
+test objective	TO 18	Next button is disabled when one or more required fields are empty
+test objective	TO 19	Next button is enabled when all required fields are filled in
+
+step	1. Check if Next button is disabled in Date and Location window	Next button is disabled
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	date and location	next	disabled
+
+	window	control	value
+enter	10krxpb0z	10ks2h9ga7	Benton
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	date and location	next	enabled
+
+	window	control	value
+set	10krxpb0z	10ks2hg6ti	off
+
+	window	control	value
+enter	10krxpb0z	10ks2hadwr	Anderson
+
+step	2. Check if Next button is enabled  in Date and Location window	Next button is enabled
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	date and location	next	enabled
+
+	window	control
+click	10krxpb0z	10ks2h8kmt
+click	10ks7ciu8x	10ksq72rzq
+
+step	3. Check if Next button is disabled in Rental Information window	Next button is disabled
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	disabled
+
+	window	control	value
+enter	10kssaf6tk	11n96f4tpd	Tom
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	disabled
+
+	window	control	value
+enter	10kssaf6tk	11n96f7xey	Thomas
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	disabled
+
+	window	control	value
+enter	10kssaf6tk	10kt1q6p9v	123456
+
+step	4. Check if Next button is enabled  in Rental Information window	Next button is enabled
+
+	10m0arkjbb	10m0armfru	10m0arnb97
+10m09yzyjt	rental information	next	enabled
+
+FINAL	Cleaning up
+
+	10n52uv9em
+10n52uutcy	10kssaf6tk

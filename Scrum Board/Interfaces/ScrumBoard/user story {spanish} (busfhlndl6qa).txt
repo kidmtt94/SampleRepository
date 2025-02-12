@@ -1,0 +1,33 @@
+[SETTINGS]
+creation date=1560410870249
+version=2
+status=New
+update date=1560410870384
+title={Scrum Board.*}
+checksum file=2900589871
+revision=1560410870401
+revision timestamp=1560410870401
+[SCRIPT]
+INTERFACE ENTITY	user story {spanish}
+interface entity setting	title	{Scrum Board.*}
+
+	ta name	ta class	id
+interface element	title	input-text	txtTitle
+interface element	estimate	input-text	txtEstimate
+interface element	spent	input-text	txtSpent
+interface element	assignee	input-text	txtAsignee
+
+	ta name	ta class	id
+interface element	priority	select-one	txtPriority
+interface element	component	select-one	txtComponent
+
+	ta name	ta class	xpath
+interface element	update	span	//span[.='Actualizar']
+interface element	cancel	span	//span[.='Cancelar']
+interface element	missing title warning	span	//span[.='Título es necesario']
+interface element	invalid estimate warning	span	//span[contains(@htmlfor,"#txtEstimate")]
+interface element	invalid spent warning	span	//span[contains(@htmlfor,"#txtSpent")]
+interface element	create	span	//span[.='Crear']
+
+	ta name	ta class	id
+interface element	description	textarea	txtDescription

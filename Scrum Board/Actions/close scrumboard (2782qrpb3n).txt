@@ -1,0 +1,16 @@
+[SETTINGS]
+creation date=1357735977000
+version=1
+status=New
+update date=1359371934000
+checksum file=1299006667
+revision=1359371934026
+revision timestamp=1359371934026
+[SCRIPT]
+ACTION DEFINITION	close scrumboard
+
+	window
+close window	[title={.*Scrum Board.*}]
+
+	window	time out
+wait for window close	[title={.*Scrum Board.*}]	# cf waiting time

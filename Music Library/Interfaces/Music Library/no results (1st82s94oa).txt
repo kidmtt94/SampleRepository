@@ -1,0 +1,15 @@
+[SETTINGS]
+creation date=1284399082000
+status=New
+update date=1332856405000
+title=No Results
+checksum file=283773612
+revision=1332856395000
+revision timestamp=1332856395000
+[SCRIPT]
+INTERFACE ENTITY	no results
+interface entity setting	title	No Results
+interface entity setting	use frames	no
+
+	ta name	ta class	automation id
+interface element	ok	button	OkButton

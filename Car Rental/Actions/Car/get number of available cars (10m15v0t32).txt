@@ -1,0 +1,49 @@
+[SETTINGS]
+creation date=1282845208000
+version=11
+status=Complete
+update date=1402302215000
+checksum file=3530972481
+description=get currently available cars
+rename history=1282907333000	10m15v0t32	get available cars o	get available cars	axe8xofkt0xl	NEW
+1344356625000	10m15v0t32	get available cars	get number of available cars	axe8xofkkl4m	NEW
+revision=1357903918970
+1344356625000
+1302172149000
+1284752632000
+1284751850000
+1284665331000
+1282907333000
+1282845284000
+1282845266000
+1282845239000
+1282845208000
+revision timestamp=1357903918970
+[SCRIPT]
+10krphrvqi=welcome
+10ku4ocv3a=available car
+10ku4obim5=car select tree
+10ku4oen9f=home
+10kruc0zvd=view cars
+10ku2gm81f=view cars
+ACTION DEFINITION	get number of available cars
+
+	name	default value	description	type	modifier
+argument	car		The car name	Value Set	Compact/Pontiac Grand Am,Standard/Chevrolet Monte Carlo,Standard/Toyota Prius,Standard/Ford Mustang Coupe,Premium/Buick LeSabre,Mini Van/Chevrolet Uplander,*
+argument	return available cars		The number of return available cars
+
+
+	window	control
+click	10krphrvqi	10kruc0zvd
+
+	window	tree	node path
+click tree node	10ku2gm81f	10ku4obim5	# "Car Types/" & car
+
+	window	control	variable
+get	10ku2gm81f	10ku4ocv3a	>> tmp
+
+	variable	value
+set variable	# return available cars	# tmp
+
+	window	control
+click	10ku2gm81f	10ku4oen9f

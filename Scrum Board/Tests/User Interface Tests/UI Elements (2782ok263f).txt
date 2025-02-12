@@ -1,0 +1,136 @@
+[SETTINGS]
+creation date=1358186372000
+version=3
+priority=Medium
+status=New
+update date=1447042617697
+checksum file=1356820928
+run status=Passed
+recent duration=31000
+revision=1447042617619
+1447041954757
+1447041896523
+1361800231333
+1359373205286
+1359371840131
+revision timestamp=1447042617619
+[SCRIPT]
+2782s80sj2=password
+27826q4tfi=cancel
+27826q2hyc=spent
+27826qi2g4=cancel
+27826qgogu=ok
+27826q93kr=welcome message
+27826q62po=scrumboard
+27826q1p3q=description
+27826qes4j=delete card
+27826q80jj=add user story
+2782ryn2zi=delete user story
+27826q9z5e=done
+2782s809n7=username
+27826qcty9=login
+27826qaq33=in progress
+27826q5phy=title
+27826qb32s=login
+27826q23a=component
+27826qhg2m=warning message
+27826qac91=to do
+2782rypqfn=button
+27826pyzsd=user story
+27826q41mf=estimate
+2782qttono=config
+2782rypcgi=card id
+27826qd5sk=password
+27826qeej1=username
+27826q2u1a=assignee
+2782skkrpa=start scrumboard
+2782s7yhbe=login
+27826qh3kq=x close
+27826q8dwq=logout
+2782qrpb3n=close scrumboard
+27826q55kt=create
+TEST MODULE	UI Elements
+
+OBJECTIVES
+test objective	TO 12	Login window and all controls exist
+test objective	TO 13	ScrumBoard window and all controls exist
+test objective	TO 14	User Story window and all controls exist
+test objective	TO 15	Detete User Story window and all controls exist
+
+INITIAL	Setting up
+
+2782qttono
+
+2782skkrpa
+
+TEST CASE	TC 01	Verify that Login window and all controls exist
+test objective	TO 12	Login window and all controls exist
+
+	window
+check window exists	27826qb32s
+
+	window	control
+check control exists	27826qb32s	27826qeej1
+check control exists	27826qb32s	27826qd5sk
+check control exists	27826qb32s	27826qcty9
+
+TEST CASE	TC 02	Verify that ScrumBoard window and all controls exist
+test objective	TO 13	ScrumBoard window and all controls exist
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	John	tester
+
+	window
+check window exists	27826q62po
+
+	window	control
+check control exists	27826q62po	27826q80jj
+check control exists	27826q62po	27826q9z5e
+check control exists	27826q62po	27826qaq33
+check control exists	27826q62po	27826q8dwq
+check control exists	27826q62po	27826qac91
+check control exists	27826q62po	27826q93kr
+
+TEST CASE	TC 03	Verify that User Story window and all controls exist
+test objective	TO 14	User Story window and all controls exist
+
+	window	control
+click	27826q62po	27826q80jj
+
+	window
+check window exists	27826pyzsd
+
+	window	control
+check control exists	27826pyzsd	27826q2u1a
+check control exists	27826pyzsd	27826q4tfi
+check control exists	27826pyzsd	27826q23a
+check control exists	27826pyzsd	27826q55kt
+check control exists	27826pyzsd	27826q1p3q
+check control exists	27826pyzsd	27826q41mf
+check control exists	27826pyzsd	27826q2hyc
+check control exists	27826pyzsd	27826q5phy
+
+	window	control
+click	27826pyzsd	27826q4tfi
+
+TEST CASE	TC 04	Verify that detete User Story window and all controls exist
+test objective	TO 15	Detete User Story window and all controls exist
+
+	2782rypcgi	2782rypqfn
+2782ryn2zi	Car - 1	ignore
+
+	window
+check window exists	27826qes4j
+
+	window	control
+check control exists	27826qes4j	27826qhg2m
+check control exists	27826qes4j	27826qi2g4
+check control exists	27826qes4j	27826qgogu
+check control exists	27826qes4j	27826qh3kq
+
+	window	control
+click	27826qes4j	27826qi2g4
+
+FINAL	Cleaning up
+
+2782qrpb3n

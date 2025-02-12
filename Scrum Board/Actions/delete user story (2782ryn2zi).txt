@@ -1,0 +1,35 @@
+[SETTINGS]
+creation date=1357579020000
+version=2
+status=New
+update date=1560411619440
+checksum file=2785502819
+revision=1560411619467
+1466393037198
+1359373240752
+1359371985391
+revision timestamp=1560411619467
+[SCRIPT]
+busfhhjglyrn=delete card
+busfhj17ne6x=scrumboard
+ACTION DEFINITION	delete user story
+
+	name	default value	description	type	modifier
+argument	card id
+argument	button			Value Set	ok,cancel
+
+	variable	value
+set variable	i	# instr(card id, " - ", 1)
+set variable	id	# right(card id, length(card id) - i - 2)
+
+	window	control
+click	busfhj17ne6x	#"[ta class=div, xpath='//div[@class="&""""&"showmenu"&""""&" and contains(@id,"&""""&id&""""&")]']"
+click	busfhj17ne6x	#"[ta class=link, xpath='//a[@class="&""""&"lnkDelete"&""""&"and @href="&""""&"javascript:SBD.confirmDelete("&id&")"&""""&"]']"
+
+	condition
+if	# button <>"ignore" and button <> ""
+
+	window	control
+click	busfhhjglyrn	# button
+
+end if

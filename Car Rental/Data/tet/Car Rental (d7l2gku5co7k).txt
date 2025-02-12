@@ -1,0 +1,12 @@
+[SETTINGS]
+check out user=10jqkwto0
+check out machine=AGT212340
+creation date=1738814959552
+version=1
+status=New
+update date=1738814959570
+checksum file=2854194992
+revision=1738814959573
+revision timestamp=1738814959573
+[SCRIPT]
+DATA SET	Car Rental

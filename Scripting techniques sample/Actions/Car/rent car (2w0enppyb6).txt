@@ -1,0 +1,76 @@
+[SETTINGS]
+checksum file=318900892
+description=Make a new order
+creation date=1282845386000
+version=2
+status=Complete
+update date=1403088495000
+revision=1403088495754
+1403088010000
+revision timestamp=1403088495754
+[SCRIPT]
+2w0enxdzbd=last name
+2w0enxarna=state return
+2w0enqve15=car
+2w0enx8aca=duration
+2w0enxactc=country return
+2w0enxbi83=fill rental information
+2w0eoiaa62=ok
+2w0eojm4r=total payment
+2w0eojhdbe=confirm reservation
+2w0enxeexn=driver license
+2w0eoijggy=welcome
+2w0eoi7e39=car rental message
+2w0enx35r7=select date and location
+2w0enx8pco=country pickup
+2w0enxdjie=first name
+2w0enx9yox=return same location
+2w0enxhnr2=rental option
+2w0enqth2=select car
+2w0enx9jmc=city pickup
+2w0eojjafk=finish
+2w0enxb5iq=city return
+2w0eoivp87=new order
+2w0enx95ao=state pickup
+2w0enqvzdn=number of cars
+ACTION DEFINITION	rent car
+
+	name	default value	description	type	modifier
+argument	duration	1	The return car date - the pickup car date
+argument	country pickup	Canada	The country name	Value Set	United States, Canada,*
+argument	state pickup	Quebec	The state name
+argument	city pickup	Brossard	The city name
+argument	return same location	<ignore>	Value: yes/no to turn on/off the 'Return car at the same location' checkbox	Value Set	yes,no, *
+argument	country return	<ignore>	United States/Canada: The country name	Value Set	United States, Canada,*
+argument	state return	<ignore>	The state name
+argument	city return	<ignore>	The city name
+argument	first name	Peter	The first name value
+argument	last name	Lee	The last name value
+argument	driver license	123456	The driver license value
+argument	rental option	Infant Seat	The option service	Value Set	Greenhouse Gas Emissions Offset,Infant Seat,Child/toddler Seat,GPS Navigation Device,Collision Damage Waiver Full,Extended Protecttion,Roadside Plus,Return Fuel at any level,*
+argument	car	Compact/Toyota Prius	The car name	Value Set	Compact/Pontiac Grand Am,Standard/Chevrolet Monte Carlo,Standard/Toyota Prius,Standard/Ford Mustang Coupe,Premium/Buick LeSabre,Mini Van/Chevrolet Uplander,*
+argument	number of cars	1	The number of cars to rent
+argument	total payment		return the value of total payment after a rental reservation
+
+
+	window	control
+click	2w0eoijggy	2w0eoivp87
+
+	2w0enx8aca	2w0enx8pco	2w0enx95ao	2w0enx9jmc	2w0enx9yox
+2w0enx35r7	# duration	# country pickup	# state pickup	# city pickup	# return same location
+
+	2w0enxactc	2w0enxarna	2w0enxb5iq
+>>>	# country return	# state return	# city return
+
+	2w0enqve15	2w0enqvzdn
+2w0enqth2	# car	# number of cars
+
+	2w0enxdjie	2w0enxdzbd	2w0enxeexn	2w0enxhnr2
+2w0enxbi83	# first name	# last name	# driver license	# rental option
+
+	window	control	property	variable
+get control property	2w0eojhdbe	2w0eojm4r	value	# total payment
+
+	window	control
+click	2w0eojhdbe	2w0eojjafk
+click	2w0eoi7e39	2w0eoiaa62

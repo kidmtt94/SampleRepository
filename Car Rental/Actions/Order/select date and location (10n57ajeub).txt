@@ -1,0 +1,109 @@
+[SETTINGS]
+creation date=1282903794000
+status=Complete
+update date=1402745498000
+checksum file=67120696
+description=select date and location
+version=32
+rename history=1282904122000	10n57ajeub	test	fill date and location	axe8xoftytmi	NEW
+1284728584000	10n57ajeub	fill date and location	selectl date and location	axe8xoftofuz	NEW
+1284728589000	10n57ajeub	selectl date and location	select date and location	axe8xoftmmbt	NEW
+revision=1402745499506
+1402308798740
+1402302847263
+1401892064267
+1401889736282
+1357903919360
+1348050796585
+1344940199000
+1306254560000
+1306236342000
+1306236327000
+1306236236000
+1306235125000
+1302171916000
+1284728589000
+1284728584000
+1284665330000
+1283339128000
+1283338887000
+1283275918000
+1282904122000
+1282904105000
+1282904099000
+1282904091000
+1282904086000
+1282904067000
+1282904054000
+1282904039000
+1282904032000
+1282904023000
+1282903956000
+1282903795000
+revision timestamp=1402745499506
+[SCRIPT]
+10ks2h8kmt=next
+10ks2hh2k=return date
+10ks2h78z2=pickup state
+10ks2hg6ti=return at same location
+10krxpb0z=date and location
+1dbcks31g5=select country
+10ks2h9ga7=pickup city
+1zdaihw42u=type
+1dbcks597w=country
+10ks2hadwr=return city
+10ks2h2sge=return state
+ACTION DEFINITION	select date and location
+
+	name	default value	description	type	modifier
+argument	duration	1	car return date - car pickup date
+argument	country pickup	Canada	United States / Canada	Value Set	United States, Canada, *
+argument	state pickup	Quebec	The state name	String
+argument	city pickup	Brossard	The city name	String
+argument	return same location	<ignore>	Value: yes/no to turn on/off the 'Return car at the same location' checkbox	Value Set	yes,no,*
+argument	country return	<ignore>	United States / Canada	Value Set	United States, Canada, *
+argument	state return	<ignore>	The state name	String
+argument	city return	<ignore>	The city name	String
+
+
+section	Car Pick up
+
+	1dbcks597w
+1dbcks31g5	# country pickup
+
+	window	control	value
+select	10krxpb0z	10ks2h78z2	# state pickup
+select	10krxpb0z	10ks2h78z2	# state pickup
+
+	window	control	value
+enter	10krxpb0z	10ks2h9ga7	# city pickup
+
+section	Car Return
+
+	condition
+if	#duration > 1
+
+	window	control	number
+spin up	10krxpb0z	10ks2hh2k	# duration - 1
+
+end if
+
+	condition
+if	# return same location = "no"
+
+	window	control	value
+set	10krxpb0z	10ks2hg6ti	off
+
+	1dbcks597w	1zdaihw42u
+1dbcks31g5	# country return	Return
+
+	window	control	value
+select	10krxpb0z	10ks2h2sge	#state return
+
+	window	control	value
+enter	10krxpb0z	10ks2hadwr	# city return
+
+end if
+
+	window	control
+click	10krxpb0z	10ks2h8kmt

@@ -1,0 +1,98 @@
+[SETTINGS]
+creation date=1357552198000
+version=3
+priority=Medium
+status=Complete
+update date=1362355200000
+checksum file=3080952898
+run status=Passed
+recent duration=75000
+revision=1361800180756
+1359373232474
+1359371814449
+revision timestamp=1361800180756
+[SCRIPT]
+2782qkugq8=id
+2782s7yhbe=login
+2782qgx4et=add user story
+2782s1d4ec=component
+2782qgyysm=title
+2782qh0fs1=component
+2782s809n7=username
+2782qh1okk=assignee
+2782sdipjh=move user story
+2782qm3hun=button
+2782s1bh8y=card id
+2782qm2he=status
+2782qkx8he=estimate
+2782skkrpa=start scrumboard
+2782qgzgeg=description
+2782s1c2zj=title
+2782qksmqt=check user story detail
+2782qh0wkb=estimate
+2782qh22x5=button
+2782qkws1a=component
+2782qrpb3n=close scrumboard
+2782s1ec65=assignee
+2782qkvc9u=description
+2782s80sj2=password
+2782s1e098=spent
+2782s1eqib=button
+2782qkxjxk=spent
+2782s1cerh=description
+2782qkxxqb=assignee
+2782sdkgfu=card id
+2782sdkywj=to
+2782s1cr1q=priority
+2782qkvuyk=priority
+2782qgzuhb=priority
+2782qttono=config
+2782qkuzgv=title
+2782qh1bex=spent
+2782s1djo=estimate
+2782s17mzb=edit user story
+TEST MODULE	Edit User Story
+
+OBJECTIVES
+test objective	TO 03	User story can be updated sucessfully
+test objective	TO 04	User story status will be updated after moving to another phase
+
+INITIAL	Setting up
+
+2782qttono
+
+2782skkrpa
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	John	tester
+
+TEST CASE	Edit 001	Verify that user story can be edited sucessfully
+test objective	TO 03	User story can be updated sucessfully
+
+	2782qgyysm	2782qgzgeg	2782qgzuhb	2782qh0fs1	2782qh0wkb	2782qh1bex	2782qh1okk	2782qh22x5
+2782qgx4et	"Cancel Order" function	Design UI and functional for all required steps to cancel a order.	Medium	Function	2	0	Peter	create
+
+	2782s1bh8y	2782s1c2zj	2782s1cerh	2782s1cr1q	2782s1d4ec	2782s1djo	2782s1e098	2782s1ec65	2782s1eqib
+2782s17mzb	Car - 9			High	User Interface	2.5	0.5		update
+
+	2782qkugq8	2782qkuzgv	2782qkvc9u	2782qkvuyk	2782qkws1a	2782qkx8he	2782qkxjxk	2782qkxxqb	2782qm2he	2782qm3hun
+2782qksmqt	Car - 9	"Cancel Order" function	Design UI and functional for all required steps to cancel a order.	High	User Interface	2.5	0.5	Peter	To Do	close
+
+TEST CASE	Edit 002	Verify that user story status will be updated after moving to another phase
+test objective	TO 04	User story status will be updated after moving to another phase
+
+	2782sdkgfu	2782sdkywj
+2782sdipjh	Car - 9	done
+
+	2782qkugq8	2782qkuzgv	2782qkvc9u	2782qkvuyk	2782qkws1a	2782qkx8he	2782qkxjxk	2782qkxxqb	2782qm2he	2782qm3hun
+2782qksmqt	Car - 9	"Cancel Order" function	Design UI and functional for all required steps to cancel a order.	High	User Interface	2.5	0.5	Peter	Done	close
+
+	2782sdkgfu	2782sdkywj
+2782sdipjh	Car - 9	in progress
+
+	2782qkugq8	2782qkuzgv	2782qkvc9u	2782qkvuyk	2782qkws1a	2782qkx8he	2782qkxjxk	2782qkxxqb	2782qm2he	2782qm3hun
+2782qksmqt	Car - 9	"Cancel Order" function	Design UI and functional for all required steps to cancel a order.	High	User Interface	2.5	0.5	Peter	In progress	close
+
+FINAL	Cleaning up
+
+2782qrpb3n

@@ -1,0 +1,83 @@
+[SETTINGS]
+creation date=1357552174000
+version=2
+priority=Medium
+status=Verifying
+update date=1362355200000
+checksum file=812690970
+run status=Passed
+recent duration=27000
+revision=1361800205386
+1359371814158
+revision timestamp=1361800205386
+[SCRIPT]
+2782qrpb3n=close scrumboard
+2782s7yhbe=login
+27826q8dwq=logout
+2782s80sj2=password
+27826q80jj=add user story
+27826q62po=scrumboard
+27826qb32s=login
+27826q9z5e=done
+2782s809n7=username
+27826qdx2b=warning message
+27826q93kr=welcome message
+2782qttono=config
+27826qac91=to do
+2782skkrpa=start scrumboard
+27826qaq33=in progress
+TEST MODULE	Login validation
+
+OBJECTIVES
+test objective	TO 10	Access is denied with expected message handling for an invalid login
+test objective	TO 11	Access is granted for a valid login
+
+INITIAL	Setting up
+
+2782qttono
+
+TEST CASE	Login validation 001	Invalid login (Access denied)
+test objective	TO 10	Access is denied with expected message handling for an invalid login
+
+2782skkrpa
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	john	54321
+
+	window	control	value
+check	27826qb32s	27826qdx2b	The username or password is incorrect.
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	noone
+
+	window	control	value
+check	27826qb32s	27826qdx2b	The username or password is incorrect.
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	noone	nothing
+
+	window	control	value
+check	27826qb32s	27826qdx2b	The username or password is incorrect.
+
+TEST CASE	Login validation 002	Valid login (Access granted)
+test objective	TO 11	Access is granted for a valid login
+
+	2782s809n7	2782s80sj2
+2782s7yhbe	John	tester
+
+	window
+check window exists	27826q62po
+
+	window	control	value
+check	27826q62po	27826q93kr	Hi, John
+
+	window	control
+check control exists	27826q62po	27826qac91
+check control exists	27826q62po	27826q9z5e
+check control exists	27826q62po	27826qaq33
+check control exists	27826q62po	27826q80jj
+check control exists	27826q62po	27826q8dwq
+
+FINAL	Cleaning up
+
+2782qrpb3n

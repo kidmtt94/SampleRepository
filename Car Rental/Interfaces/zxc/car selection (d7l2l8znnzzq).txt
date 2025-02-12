@@ -1,0 +1,12 @@
+[SETTINGS]
+check out user=10jqkwto0
+check out machine=AGT212340
+creation date=1738815325569
+version=1
+status=New
+update date=1738815325586
+checksum file=2307538823
+revision=1738815325589
+revision timestamp=1738815325589
+[SCRIPT]
+INTERFACE ENTITY	car selection

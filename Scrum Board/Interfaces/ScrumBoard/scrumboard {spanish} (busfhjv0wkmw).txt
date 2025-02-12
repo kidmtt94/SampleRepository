@@ -1,0 +1,35 @@
+[SETTINGS]
+creation date=1560410866357
+version=2
+status=New
+update date=1561608593559
+title={Scrum Board.*}
+checksum file=1309912835
+revision=1561608593566
+1561604778563
+1560410866492
+revision timestamp=1561608593566
+[SCRIPT]
+INTERFACE ENTITY	scrumboard {spanish}
+interface entity setting	title	{Scrum Board.*}
+
+	ta name	ta class	id
+interface element	welcome message	div	divWelcome
+
+	ta name	ta class	id
+interface element	logout	link	lnkLogout
+
+	ta name	ta class	id
+interface element	add user story	link	btnCreate
+
+	ta name	ta class	id
+interface element	to do	ul	divDo
+interface element	in progress	ul	divProgress
+interface element	done	ul	divDone
+
+	ta name	ta class	xpath
+interface element	edit	link	//a[@class="lnkEdit"]
+interface element	delete	link	//a[@class="lnkDelete"]
+
+	ta name	ta class	xpath
+interface element	lbl logo	div	//div[@class='logo']

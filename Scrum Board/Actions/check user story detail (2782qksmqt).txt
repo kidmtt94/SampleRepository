@@ -1,0 +1,102 @@
+[SETTINGS]
+creation date=1358156412000
+version=2
+status=New
+update date=1560410081247
+checksum file=265527318
+revision=1560410081279
+1359373240443
+1359371926772
+revision timestamp=1560410081279
+[SCRIPT]
+27826prky5=card info
+27826pn9sn=view card
+27826q62po=scrumboard
+ACTION DEFINITION	check user story detail
+	name	default value	description	type	modifier
+argument	id			String
+argument	title			String
+argument	description			String
+argument	priority			String
+argument	component			String
+argument	estimate			String
+argument	spent			String
+argument	assignee			String
+argument	status			String
+argument	button			Value Set	close, x close
+
+
+	window	control
+click	27826q62po	#"[ta class=span, xpath='//span[@class="&""""&"sID"&""""&" and contains(text(),"&""""&id&""""&")]']"
+
+	condition
+if	# title <> "ignore" and title <>""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	1	2	# title
+
+end if
+
+	condition
+if	# description <> "ignore" and description <> ""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	2	2	# description
+
+end if
+
+	condition
+if	# priority <> "ignore" and priority <> ""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	3	2	# priority
+
+end if
+
+	condition
+if	# component <> "ignore" and component <> ""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	4	2	# component
+
+end if
+
+	condition
+if	# estimate <> "ignore" and  estimate <> ""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	5	2	# estimate
+
+end if
+
+	condition
+if	# spent <> "ignore" and spent <> ""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	6	2	# spent
+
+end if
+
+	condition
+if	# assignee <> "ignore" and assignee <> ""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	7	2	# assignee
+
+end if
+
+	condition
+if	# status <> "ignore" and status <> ""
+
+	window	table	row	column	expected
+check table cell value	27826pn9sn	27826prky5	8	2	# status
+
+end if
+
+	condition
+if	# button <> "ignore" and button <> ""
+
+	window	control
+click	27826pn9sn	# button
+
+end if

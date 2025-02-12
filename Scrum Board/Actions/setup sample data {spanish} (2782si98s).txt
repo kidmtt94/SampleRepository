@@ -1,0 +1,35 @@
+[SETTINGS]
+creation date=1358865652000
+version=1
+status=New
+update date=1359372009000
+checksum file=1688901776
+revision=1359372009427
+revision timestamp=1359372009427
+[SCRIPT]
+ACTION DEFINITION	setup sample data {spanish}
+
+	variable	value
+set variable	sample card title	ayudar
+set variable	sample card description	Función para el usuario para ver la ayuda
+set variable	sample card priority	Medio
+set variable	sample card component	Función
+set variable	sample card estimate	10
+set variable	sample card spent	0
+set variable	sample card assignee	John
+
+	variable	value
+set variable	dummy title	"Cancel Order" función
+set variable	dummy description	Diseño de interfaz de usuario y funcionalidad para todos los pasos necesarios para cancelar un pedido.
+set variable	dummy priority	Medio
+set variable	dummy component	Función
+set variable	dummy estimate	2
+set variable	dummy spent	0
+set variable	dummy assignee	Peter
+
+	variable	value
+set variable	updated priority	Alto
+set variable	updated component	Interfaz de usuario
+set variable	done status	Hecho
+set variable	to do status	Para hacer
+set variable	in progress status	En curso

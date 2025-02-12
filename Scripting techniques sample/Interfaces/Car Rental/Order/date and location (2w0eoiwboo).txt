@@ -1,0 +1,51 @@
+[SETTINGS]
+creation date=1282831352000
+description=From Welcome window, click New Order
+version=1
+status=Complete
+update date=1403088046000
+checksum file=3666634055
+title=Car Rental-Select Date and Location
+revision=1403088046000
+revision timestamp=1403088046000
+[SCRIPT]
+INTERFACE ENTITY	date and location
+interface entity setting	title	Car Rental-Select Date and Location
+
+	ta name	ta class	caption
+interface element	return at same location	check box	Return car at the same location
+
+	ta name	ta class	description
+interface element	pickup date	spinbox	Pickup Date
+interface element	return date	spinbox	Return Date
+
+	ta name	ta class	caption
+interface element	home	button	Home
+interface element	next	button	Next
+
+	ta name	ta class	description
+interface element	pickup state	list	Pickup State
+interface element	return state	list	Return State
+
+	ta name	ta class	value
+interface element	pickup date lbl	label	Pickup Date
+interface element	pickup country lbl	label	Pickup Country
+interface element	pickup state lbl	label	Pickup State
+interface element	pickup city lbl	label	{Pickup City.*}
+interface element	return date lbl	label	Return Date
+interface element	return country lbl	label	Return Country
+interface element	return state lbl	label	Return State
+interface element	return city lbl	label	{Return City.*}
+
+	ta name	ta class	description
+interface element	pickup country us	radio button	Pickup US
+interface element	pickup country canada	radio button	Pickup Canada
+interface element	return country us	radio button	Return US
+interface element	return country canada	radio button	Return Canada
+
+	ta name	ta class	description
+interface element	pickup city	text	Pickup City
+interface element	return city	text	Return City
+
+	ta name	ta class	value
+interface element	main menu	menu bar	FileAbout

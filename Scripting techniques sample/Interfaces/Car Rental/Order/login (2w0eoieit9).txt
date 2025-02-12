@@ -1,0 +1,27 @@
+[SETTINGS]
+creation date=1282829208000
+description=Start Car Retal 
+version=1
+status=Complete
+update date=1403088045000
+checksum file=1182416993
+title=Car Rental-Login
+revision=1403088045000
+revision timestamp=1403088045000
+[SCRIPT]
+INTERFACE ENTITY	login
+interface entity setting	title	Car Rental-Login
+
+	ta name	ta class	caption
+interface element	login	button	Login
+interface element	clear	button	Clear
+
+	ta name	ta class	caption
+interface element	lbl user name	label	User name
+interface element	lbl password	label	Password
+
+	ta name	ta class	label
+interface element	password	password text	Password
+
+	ta name	ta class	description
+interface element	user name	textbox	User name

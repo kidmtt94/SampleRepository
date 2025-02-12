@@ -1,0 +1,46 @@
+[SETTINGS]
+creation date=1282843883000
+version=1
+status=Complete
+update date=1403088027000
+checksum file=1879479582
+description=check state of control
+revision=1403088027000
+revision timestamp=1403088027000
+[SCRIPT]
+ACTION DEFINITION	check control state
+
+	name	default value	description
+argument	window		The entity window
+argument	control		The interface element
+argument	state		disabled/enabled
+
+
+	window	control	property	variable
+get control property	# window	# control	state	>> tmp
+
+	condition
+if	# state = "disabled"
+
+	text	fragment
+check text not contains	# tmp	enabled
+
+	condition
+else if	# state = "enabled"
+
+	text	fragment
+check text contains	# tmp	# state
+
+	condition
+else if	# state = "unchecked"
+
+	text	fragment
+check text not contains	# tmp	checked
+
+	condition
+else if	# state = "checked"
+
+	text	fragment
+check text contains	# tmp	# state
+
+end if

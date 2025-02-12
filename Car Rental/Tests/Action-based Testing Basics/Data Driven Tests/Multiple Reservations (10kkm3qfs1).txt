@@ -1,0 +1,121 @@
+[SETTINGS]
+creation date=1282821851000
+description=User can do multiple rental reservations
+version=27
+priority=High
+status=Complete
+run status=Passed
+update date=1402303469000
+checksum file=1139734016
+rename history=1306838139000	11nc9n0g0	TC_CRR_DDT01	TC 01	axe8xofko2kd	NEW
+1332858904000	10kkm3qfs1	Data-Driven	Data driven	axe8xofts9uh	NEW
+1335016996000	10kkm3qfs1	Data driven	Data-driven sample tests	axe8xoftrdv7	NEW
+1344351915000	10kkm3qfs1	Data-driven sample tests	Multiple Reservations	axe8xofu09ni	NEW
+check out user=10jqkwto0
+check out machine=AGT212340
+revision=1402303470049
+1357903916509
+1347636462158
+1347040603416
+1346179790582
+1344359826000
+1344359772000
+1344359444000
+1344359418000
+1344351915000
+1343828693000
+1342002254000
+1341930584000
+1335030824000
+1335030698000
+1335030680000
+1335030650000
+1335030639000
+1335017053000
+1335016996000
+1332858959000
+1332858904000
+1332843599000
+1306849043000
+1306838139000
+1282821884000
+1282821851000
+revision timestamp=1402303470049
+[SCRIPT]
+10krphrvqi=welcome
+10kruc5fah=view orders
+10m1a0z7kn=rent car
+11n3mia5c3=value
+10m1aw7ob=country pickup
+10m1aw9g7h=state pickup
+10n5xk0h14=start application
+11n8dfnakz=last name
+10m1awacvy=city pickup
+1ssyn4zcvj=check order information
+1sszgrsu50=field name
+10n52uutcy=close application
+10jqnrkoxj=/Car Rental
+10ktejc8ty=view orders
+10n5md9ftj=login
+1b42otp83q=config
+10n52uv9em=window
+1ssyn50isg=expected value
+10m1aw6bfx=duration
+11n3ioacj0=search order
+10m1awhhq5=driver license
+11n8dfkyav=first name
+TEST MODULE	Multiple Reservations
+
+OBJECTIVES
+test objective	TO 06	Verify that one customer can order many reservations successfully
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	One customer can order many reservations successfully
+test objective	TO 06	Verify that one customer can order many reservations successfully
+
+step	1. Place 3 new reservations	New reservations are placed
+
+	name	filter
+use data set	10jqnrkoxj	last name = "Thomas"
+
+	10m1aw6bfx	10m1aw7ob	10m1aw9g7h	10m1awacvy	11n8dfkyav	11n8dfnakz	10m1awhhq5
+10m1a0z7kn	# duration	# country pickup	# state pickup	# city pickup	# first name	# last name	# driven license
+
+repeat for data set
+
+step	2. Search new placed reservations	New placed reservations are found
+
+	window	control
+click	10krphrvqi	10kruc5fah
+
+	11n3mia5c3
+11n3ioacj0	Thomas
+
+	variable	value
+set variable	data row	1
+
+	name	filter
+use data set	10jqnrkoxj	last name = "Thomas"
+
+	1sszgrsu50	1ssyn50isg
+1ssyn4zcvj	Last Name	# last name
+1ssyn4zcvj	Duration	# duration
+1ssyn4zcvj	Pickup State	# state pickup & "-" & country pickup
+1ssyn4zcvj	Return State	# state return & "-" & country return
+
+	variable	value
+set variable	data row	# data row + 1
+
+repeat for data set
+
+FINAL	Cleaning up
+
+	10n52uv9em
+10n52uutcy	10ktejc8ty

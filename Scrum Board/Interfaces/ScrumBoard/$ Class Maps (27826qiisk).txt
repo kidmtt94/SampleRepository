@@ -1,0 +1,21 @@
+[SETTINGS]
+creation date=1357316777000
+update date=1359371118000
+version=3
+checksum file=198994221
+revision=1394705859498
+1373628631054
+1359371118093
+revision timestamp=1394705859498
+[SCRIPT]
+INTERFACE ENTITY	$ Class Maps
+PLATFORM	WIN32
+ta class	native class	role
+generic	InternetToolbarHost	
+spinbox	UpDown20WndClass	client
+spinbox	msctls_updown32	
+spinbox	msctls_updown32	spin button
+spinbox	spin	client
+spinbox	{WindowsForms10.Window.8.*}	spin button
+
+PLATFORM	WPF

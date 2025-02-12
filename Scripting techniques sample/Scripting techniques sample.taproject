@@ -1,0 +1,106 @@
+entity	65536	7	3	SampleRepository
+setting	65536	22	0	1
+2004-01-02 00:00:00.0
+setting	65536	8	0	1
+d7k62ki3q84i
+setting	65536	86	0	1
+8.2
+setting	65536	270	0	1
+d7pgzqe24shs
+entity	277zhy49d5	2	3	Scripting techniques sample
+setting	277zhy49d5	97	0	1
+1359367096000
+setting	277zhy49d5	82	0	1
+TestArchitect provides scripting samples to illustrate additional techniques in comparing pictures, obtaining controls, and using wild cards and inline data sets.
+setting	277zhy49d5	386	0	1
+Scriptingtechniquessample
+entity	10jr1b8xsg	59	3	peter
+setting	10jr1b8xsg	164	0	1
+0484853635F
+setting	10jr1b8xsg	97	0	1
+1282777485000
+setting	10jr1b8xsg	336	0	4
+10jqmmcsw8	test managers
+11fkqmi8av	test managers
+11iuw1szi2	test managers
+277zq5gz7t	test managers
+entity	10jqy64q3x	59	3	john
+setting	10jqy64q3x	164	0	1
+04848604C60
+setting	10jqy64q3x	97	0	1
+1282777350000
+setting	10jqy64q3x	336	0	3
+10jqmmcsw8	test leads
+11iuw1szi2	test leads
+11fkqmi8av	test leads
+entity	10jqkwtpv8	60	3	TestArchitect Python Harness
+setting	10jqkwtpv8	128	1	1
+c:\Python\python.exe
+setting	10jqkwtpv8	129	2	1
+"{SCRIPT}"
+setting	10jqkwtpv8	131	4	1
+File
+setting	10jqkwtpv8	132	0	1
+{INSTALL_DIR}\harness samples\python\ta_main.py
+setting	10jqkwtpv8	82	0	1
+The Python harness test tool is designed to allow the user to customize harness written in Python to interpret and execute action lines in the automation test sequence.
+entity	10jr0vnrmb	59	3	mary
+setting	10jr0vnrmb	164	0	1
+048485E5B54
+setting	10jr0vnrmb	97	0	1
+1282777466000
+setting	10jr0vnrmb	336	0	4
+10jqmmcsw8	automation leads
+11iuw1szi2	automation leads
+11fkqmi8av	automation leads
+277zq5gz7t	automation leads
+setting	10jr0vnrmb	165	0	1
+Maria
+setting	10jr0vnrmb	166	0	1
+Ave
+entity	10jqkwto0	59	3	administrator
+setting	10jqkwto0	82	1	1
+The server administrator.
+setting	10jqkwto0	103	99	1
+The server administrator is responsible for maintaining data at server level. Examples are users, test tool profiles etc. Make sure to use this account only for those kind of tasks.
+setting	10jqkwto0	164	3	1
+04848545D60
+setting	10jqkwto0	336	0	1
+administrators
+entity	10jqkwtrfu	60	3	TestArchitect Java Harness
+setting	10jqkwtrfu	128	1	1
+{INSTALL_DIR}\jre\bin\java.exe
+setting	10jqkwtrfu	129	2	1
+"{SCRIPT}"
+setting	10jqkwtrfu	131	4	1
+File
+setting	10jqkwtrfu	132	0	1
+{INSTALL_DIR}\harness samples\java\executables\java_harness.jar
+setting	10jqkwtrfu	82	0	1
+The Java harness test tool is designed to allow the user to customize harness written in Java to interpret and execute action lines in the automation test sequence.
+entity	10jqkwtsc3	60	3	TestArchitect Automation Playback
+setting	10jqkwtsc3	128	1	1
+{INSTALL_DIR}\binclient\taplayback.exe
+setting	10jqkwtsc3	131	4	1
+File
+setting	10jqkwtsc3	132	6	1
+{INSTALL_DIR}\BinClient\taplayback.exe
+setting	10jqkwtsc3	82	0	1
+TestArchitect has built-in default automation playback program called taplayback.exe which is a program that interprets and executes action lines in the automation test sequence.
+entity	10jr1nvtga	59	3	susan
+setting	10jr1nvtga	164	0	1
+04848545A50
+setting	10jr1nvtga	97	0	1
+1282777499000
+setting	10jr1nvtga	336	0	4
+10jqmmcsw8	testers,automation engineers
+11iuw1szi2	testers,automation engineers
+11fkqmi8av	testers,automation engineers
+277zq5gz7t	testers,automation engineers
+entity	10jqkwtq80	60	3	TestArchitect CSharp Harness
+setting	10jqkwtq80	128	1	1
+{INSTALL_DIR}\harness samples\csharp\executables\TestArchitect.Harness.Executor.exe
+setting	10jqkwtq80	131	4	1
+File
+setting	10jqkwtq80	82	0	1
+The C# harness test tool is designed to allow the user to customize harness written in C# to interpret and execute action lines in the automation test sequence.

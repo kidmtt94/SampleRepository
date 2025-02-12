@@ -1,0 +1,87 @@
+[SETTINGS]
+creation date=1282904877000
+description=start application
+version=17
+status=Complete
+update date=1403605146000
+checksum file=1914046085
+rename history=1282904945000	10n5xk0h14	test	start application	axe8xofl15o7	NEW
+revision=1403605146985
+1402306371930
+1402303003564
+1401888848262
+1357903919688
+1348052027214
+1348050820780
+1342088364000
+1342088095000
+1341939282000
+1334157044000
+1334156665000
+1306851862000
+1306256206000
+1283962221000
+1282904945000
+1282904878000
+revision timestamp=1403605146985
+[SCRIPT]
+10kt9oenqd=car rental message
+10ktc203ic=yes
+ACTION DEFINITION	start application
+
+
+	window	variable	time out
+does window exist	[title={Car Rental.*}]	>>main window	1
+
+	condition
+if	# main window=1
+
+	window
+close window	[title={Car Rental.*}]
+
+	window	variable	time out
+does window exist	10kt9oenqd	>>message window	1
+
+	condition
+if	# message window=1
+
+	window	control
+click	10kt9oenqd	10ktc203ic
+
+end if
+
+	window	time out
+wait for window close	[title={Car Rental.*}]	10
+
+end if
+
+	setting	value
+setting	max show length	1000
+
+	file	variable
+does file exist	C:\Program Files\LogiGear\TestArchitect\samples\CarRental\CarRental.exe	i
+does file exist	C:\Program Files (x86)\LogiGear\TestArchitect\samples\CarRental\CarRental.exe	i2
+
+	condition
+if	#i=1
+
+	variable	value
+set variable	path	C:\Program Files\LogiGear\TestArchitect\samples\CarRental\CarRental.exe
+
+	condition
+else if	#i2=1
+
+	variable	value
+set variable	path	C:\Program Files (x86)\LogiGear\TestArchitect\samples\CarRental\CarRental.exe
+
+else
+
+	text
+report error	"The "Car Rental" sample application was not installed at its default location. Please open the “start application” high-level action, then correct the file path of your sample application accordingly."
+
+exit test module
+
+end if
+
+	program
+start program	#path

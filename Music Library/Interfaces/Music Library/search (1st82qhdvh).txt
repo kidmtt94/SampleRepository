@@ -1,0 +1,45 @@
+[SETTINGS]
+creation date=1284398382000
+version=6
+status=Complete
+update date=1375265520000
+title={.*Music Library.*}
+checksum file=2907557020
+revision=1375265520543
+1346866375011
+1346147490819
+1346147068693
+1334157628000
+1332856393000
+revision timestamp=1375265520543
+[SCRIPT]
+INTERFACE ENTITY	search
+interface entity setting	title	{.*Music Library.*}
+
+	ta name	ta class	automation id
+interface element	search toolbar	button	SearchTBButton
+interface element	search	button	SearchButton
+
+	ta name	ta class	automation id
+interface element	mp3	checkbox	mp3CheckBox
+interface element	wma	checkbox	wmaCheckBox
+interface element	acc	checkbox	accCheckBox
+
+	ta name	ta class	automation id
+interface element	bitrate value	combobox	BitrateComboBox
+
+	ta name	ta class	automation id
+interface element	songs list	listview	SongsListView
+
+	ta name	ta class	global pos
+interface element	main menu	menu bar	menu bar 1
+
+	ta name	ta class	automation id
+interface element	under 4000 kb	radio button	Smaller4KRadioButton
+interface element	4000 kb or larger	radio button	Larger4KRadioButton
+
+	ta name	ta class	automation id
+interface element	artist field	textbox	ArtistTextBox
+
+	ta name	ta class	automation id
+interface element	main tab	tab control	tabControl

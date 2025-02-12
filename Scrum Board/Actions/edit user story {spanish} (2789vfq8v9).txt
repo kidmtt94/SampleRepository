@@ -1,0 +1,55 @@
+[SETTINGS]
+creation date=1357633379000
+version=2
+status=New
+update date=1560410392746
+checksum file=4110794379
+rename history=1359382908616	2789vfq8v9	edit user story	edit user story	axe8xofl0v3t	NEW
+revision=1560410392769
+1466393048864
+1359382908616
+1359382639000
+revision timestamp=1560410392769
+[SCRIPT]
+2782s4v2n7=spent
+27826q9he6=edit
+2782s4r1fw=fill in story information
+2782s4vguw=assignee
+27826pyzsd=user story
+27826q62po=scrumboard
+2782s4t4tq=title
+2782s4tkch=description
+2782s4un78=estimate
+2782s4ty39=priority
+2782s4ua7t=component
+ACTION DEFINITION	edit user story {spanish}
+
+	name	default value	description	type	modifier
+argument	card id		1,2,3...
+argument	title			String
+argument	description			String
+argument	priority			Value Set	Low,High,Medium
+argument	component			Value Set	Function, Database, User Interface
+argument	estimate			String
+argument	spent			String
+argument	assignee			String
+argument	button			Value Set	update,cancel
+
+	variable	value
+set variable	i	# instr(card id, " - ", 1)
+set variable	id	# right(card id, length(card id) - i - 2)
+
+	window	control
+click	27826q62po	#"[ta class=div, xpath='//div[@class="&""""&"showmenu"&""""&" and contains(@id,"&""""&id&""""&")]']"
+click	27826q62po	27826q9he6
+
+	2782s4t4tq	2782s4tkch	2782s4ty39	2782s4ua7t	2782s4un78	2782s4v2n7	2782s4vguw
+2782s4r1fw	# title	# description	# priority	# component	# estimate	# spent	# assignee
+
+	condition
+if	# button <>"ignore" and button <> ""
+
+	window	control
+click	27826pyzsd	# button
+
+end if

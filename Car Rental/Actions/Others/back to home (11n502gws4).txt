@@ -1,0 +1,31 @@
+[SETTINGS]
+creation date=1284741749000
+status=Complete
+update date=1402302292000
+checksum file=2381107320
+description=back to home
+version=4
+rename history=1284743285000	11n502gws4	logout	back to home	axe8xofl08ep	NEW
+revision=1357903919828
+1284746939000
+1284743285000
+1284741750000
+revision timestamp=1357903919828
+[SCRIPT]
+10kt9oenqd=car rental message
+10ktc203ic=yes
+ACTION DEFINITION	back to home
+
+	name	default value	description
+argument	current window
+
+	window	control
+click	# current window	Home
+
+	window
+if window exists	10kt9oenqd
+
+	window	control
+click	10kt9oenqd	10ktc203ic
+
+end if

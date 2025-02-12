@@ -1,0 +1,26 @@
+[SETTINGS]
+creation date=1284739545000
+description=search order
+version=3
+status=Complete
+update date=1402302256000
+checksum file=80713440
+revision=1357903919750
+1284739668000
+1284739546000
+revision timestamp=1357903919750
+[SCRIPT]
+10ktejc8ty=view orders
+10ktxwwyur=search text
+10ktxws1hf=search
+ACTION DEFINITION	search order
+
+	name	default value	description
+argument	value		the value you want to search
+
+
+	window	control	value
+enter	10ktejc8ty	10ktxwwyur	# value
+
+	window	control
+click	10ktejc8ty	10ktxws1hf

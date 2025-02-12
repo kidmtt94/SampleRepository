@@ -1,0 +1,19 @@
+[SETTINGS]
+creation date=1358156325000
+version=2
+status=New
+update date=1560410134017
+checksum file=3651468313
+revision=1560410134089
+1359373240565
+1359371931221
+revision timestamp=1560410134089
+[SCRIPT]
+27826q62po=scrumboard
+ACTION DEFINITION	check user story not exists
+
+	name	default value	description	type	modifier
+argument	id			String
+
+	window	control
+check control not exists	27826q62po	#"[ta class=span, xpath='//span[@class="&""""&"sID"&""""&" and contains(text(),"&""""&id&""""&")]']"

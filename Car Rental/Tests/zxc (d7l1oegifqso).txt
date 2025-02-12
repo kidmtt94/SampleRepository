@@ -1,0 +1,32 @@
+[SETTINGS]
+check out user=10jqkwto0
+check out machine=AGT212340
+creation date=1738812751485
+version=1
+priority=Medium
+status=New
+run status=Not tested
+update date=1738812751536
+checksum file=2994318292
+revision=1738812751543
+revision timestamp=1738812751543
+[SCRIPT]
+TEST MODULE	zxc
+
+OBJECTIVES
+
+
+
+INITIAL	Setting up
+
+
+
+
+
+
+
+
+
+
+
+FINAL	Cleaning up

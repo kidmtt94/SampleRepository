@@ -1,0 +1,50 @@
+[SETTINGS]
+creation date=1332842229000
+status=New
+update date=1403088019000
+checksum file=358515029
+version=1
+revision=1403088019000
+revision timestamp=1403088019000
+[SCRIPT]
+10ktxwnk1c=orders table
+10ktejc8ty=view orders
+ACTION DEFINITION	check order information
+
+	name	default value	description
+argument	field name
+argument	expected value
+
+
+	condition
+if	# field name="Last Name"
+
+	window	table	row	column	expected
+check table cell value	10ktejc8ty	10ktxwnk1c	# data row	3	# expected value
+
+end if
+
+	condition
+if	# field name="Duration"
+
+	window	table	row	column	expected
+check table cell value	10ktejc8ty	10ktxwnk1c	# data row	5	# expected value
+
+end if
+
+
+	condition
+if	# field name="Pickup State"
+
+	window	table	row	column	expected
+check table cell value	10ktejc8ty	10ktxwnk1c	# data row	7	# expected value
+
+end if
+
+	condition
+if	# field name="Return State"
+
+	window	table	row	column	expected
+check table cell value	10ktejc8ty	10ktxwnk1c	# data row	9	# expected value
+
+end if

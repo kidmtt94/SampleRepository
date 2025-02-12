@@ -1,0 +1,18 @@
+[SETTINGS]
+creation date=1302175528000
+status=New
+update date=1403088027000
+checksum file=4051705619
+version=1
+revision=1403088027000
+revision timestamp=1403088027000
+[SCRIPT]
+ACTION DEFINITION	config
+
+	setting	value
+setting	window wait	60
+setting	object wait	40
+setting	object wait probe	5
+setting	window wait probe	5
+setting	date format	mm/dd/yyyy
+setting	value changed wait	1000

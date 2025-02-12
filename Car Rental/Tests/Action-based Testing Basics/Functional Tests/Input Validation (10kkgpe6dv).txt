@@ -1,0 +1,192 @@
+[SETTINGS]
+creation date=1282821662000
+description=Data will not be saved if user cancels the reservation process
+version=45
+priority=Medium
+status=Complete
+run status=Passed
+update date=1401892361000
+checksum file=1165179989
+rename history=1303738744000	11n57meu0	TC_CRR_AP01	TC 01	axe8xofkmj81	NEW
+1335005213000	10kkgpe6dv	Data Input	User inputs handling	axe8xoftpa0p	NEW
+1335005266000	10kkgpe6dv	User inputs handling	Use'sr inpu-data handling	axe8xoftg5nu	NEW
+1335005286000	10kkgpe6dv	Use'sr inpu-data handling	User's inptu-data handling	axe8xofti7xd	NEW
+1335005301000	10kkgpe6dv	User's inptu-data handling	User's input-data handling	axe8xoftuhqn	NEW
+1344352378000	10kkgpe6dv	User's input-data handling	Input Validation	axe8xofu018w	NEW
+revision=1401892361278
+1401890390950
+1401890208179
+1401889990639
+1401889434860
+1357903915948
+1347040683045
+1346862176785
+1346179790916
+1344419859000
+1344419812000
+1344419774000
+1344419740000
+1344419720000
+1344352378000
+1343658752000
+1342175107000
+1342022355000
+1341998160000
+1341930402000
+1335016464000
+1335016224000
+1335016090000
+1335007642000
+1335007608000
+1335007595000
+1335007446000
+1335007410000
+1335007223000
+1335007204000
+1335007019000
+1335006621000
+1335006597000
+1335006577000
+1335006489000
+1335005301000
+1335005286000
+1335005266000
+1335005213000
+1332857488000
+1332857399000
+1306838140000
+1303738744000
+1282822732000
+1282821662000
+revision timestamp=1401892361278
+[SCRIPT]
+10ks2h5wpq=return country canada
+10m0nuh1o7=check order not exists
+10m1awdg5i=country return
+11n1x4dnzs=last name
+10ks2h9ga7=pickup city
+10ks2hdycv=pickup country us
+11n60wcyka=current window
+10n5fi276w=fill rental information
+10ks2h5098=return country us
+11n502gws4=back to home
+10ks2hd1jm=pickup country canada
+10ks2hadwr=return city
+10n5fy98wz=driver license
+10n52uutcy=close application
+10m0ko4st9=message
+10krxpb0z=date and location
+10n57ajeub=select date and location
+10n5b2zxcf=state return
+10kruc6beo=new order
+10n5b2vxdx=country pickup
+10m0ko3fek=window
+10m0ko642e=button
+10m1k6usdo=car
+10krphrvqi=welcome
+11n8dep5cp=last name
+10ks2h78z2=pickup state
+10m1a0z7kn=rent car
+10n5b30dxr=city return
+10m1aw7ob=country pickup
+10kt3bbvk4=confirm reservation
+10n5xk0h14=start application
+10ktxwr5x9=close
+10ks2h2sge=return state
+11n1x4bujj=first name
+10m0omry59=current window
+10ktejc8ty=view orders
+10n5md9ftj=login
+10m0jr2gdj=check message
+1b42otp83q=config
+10n52uv9em=window
+10kt4kqwcp=home
+10n5b2y5yb=country return
+10m1k6vovj=number of cars
+10m1ji5bx7=select car
+10n5b2wtcs=city pickup
+10n5b2wcsj=state pickup
+TEST MODULE	Input Validation
+
+OBJECTIVES
+test objective	TO 13	User is requested for confirmation when cancelling an order
+test objective	TO 14	Input data is not saved after cancelling
+test objective	TO 15	Pick-up and Return Country information will be saved if previous order is made successfully
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	Input data will not be saved if user cancels the order process
+test objective	TO 13	User is requested for confirmation when cancelling an order
+test objective	TO 14	Input data is not saved after cancelling
+
+step	1. Create a new order and cancel	Warning message appears to confirm the cancellation
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	10n5b2vxdx	10n5b2wcsj	10n5b2wtcs	10n5b2y5yb	10n5b2zxcf	10n5b30dxr	10n5b30dxr
+10n57ajeub	Canada	Manitoba	Dauphin	United States	California	Columbus	Columbus
+
+	10m1k6usdo	10m1k6vovj
+10m1ji5bx7	Standard/Ford Mustang Coupe	1
+
+	11n1x4bujj	11n1x4dnzs	10n5fy98wz
+10n5fi276w	Peter	White	536264
+
+	window	control
+click	10kt3bbvk4	10kt4kqwcp
+
+	10m0ko3fek	10m0ko4st9	10m0ko642e
+10m0jr2gdj	car rental message	If you go back to Home, all data will be lost. Do you want to cancel this order?	yes
+
+step	2. Default values are reset	All fields' value are set back to default value
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	window	control	value
+check	10krxpb0z	10ks2hdycv	on
+check	10krxpb0z	10ks2hd1jm	off
+check	10krxpb0z	10ks2h5098	on
+check	10krxpb0z	10ks2h5wpq	off
+check	10krxpb0z	10ks2h9ga7	Montgomery
+check	10krxpb0z	10ks2hadwr	Montgomery
+
+	window	control	item1
+check selected items	10krxpb0z	10ks2h78z2	Alabama
+check selected items	10krxpb0z	10ks2h2sge	Alabama
+
+step	3. Cancelled order is not saved	Cancelled order is not found
+
+	10m0omry59	11n8dep5cp
+10m0nuh1o7	date and location	Peter White
+
+	window	control
+click	10ktejc8ty	10ktxwr5x9
+
+	11n60wcyka
+11n502gws4	date and location
+
+TEST CASE	TC 02	Pick-up and Return Country information will be saved if previous order is made successfully
+test objective	TO 15	Pick-up and Return Country information will be saved if previous order is made successfully
+
+	10m1aw7ob	10m1awdg5i
+10m1a0z7kn	Canada	Canada
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	window	control	value
+check	10krxpb0z	10ks2hd1jm	on
+check	10krxpb0z	10ks2h5wpq	on
+
+FINAL	Cleaning up
+
+	10n52uv9em
+10n52uutcy	10krxpb0z

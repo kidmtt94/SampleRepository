@@ -1,0 +1,12 @@
+[SETTINGS]
+creation date=1282829162000
+update date=1403088044000
+checksum file=642186192
+version=1
+revision=1403088044000
+revision timestamp=1403088044000
+[SCRIPT]
+INTERFACE ENTITY	$ Class Maps
+PLATFORM	WIN32
+
+PLATFORM	WPF

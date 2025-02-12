@@ -1,0 +1,20 @@
+[SETTINGS]
+creation date=1560410861297
+version=1
+status=New
+update date=1560410861427
+title={Scrum Board.*}
+checksum file=411989859
+revision=1560410861472
+revision timestamp=1560410861472
+[SCRIPT]
+INTERFACE ENTITY	delete card
+interface entity setting	title	{Scrum Board.*}
+
+	ta name	ta class	id
+interface element	warning message	div	dialog-confirm
+
+	ta name	ta class	xpath
+interface element	x close	span	(//body[@id='wrapper']//span[@class='ui-icon ui-icon-closethick'])[2]
+interface element	ok	span	//span[.='OK']
+interface element	cancel	span	(//body[@id='wrapper']//span[@class='ui-button-text'])[4]

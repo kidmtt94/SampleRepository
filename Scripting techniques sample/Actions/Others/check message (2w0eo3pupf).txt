@@ -1,0 +1,31 @@
+[SETTINGS]
+creation date=1282844302000
+version=1
+status=Complete
+update date=1403088027000
+checksum file=1110775426
+description=Verify that the message is displayed correctly
+revision=1403088027000
+revision timestamp=1403088027000
+[SCRIPT]
+ACTION DEFINITION	check message
+
+	name	default value	description
+argument	window		The window name
+argument	message		The content of message
+argument	button		The button wanted to click
+
+
+	window	control	property	variable
+get control property	# window	message	value	>> temp
+
+	value	expected
+check value	# temp	# message
+
+	condition
+if	# button <> ""
+
+	window	control
+click	# window	# button
+
+end if

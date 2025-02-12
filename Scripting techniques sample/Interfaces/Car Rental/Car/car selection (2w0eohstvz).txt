@@ -1,0 +1,31 @@
+[SETTINGS]
+creation date=1282831766000
+description=Make a new order and go to step 2
+version=1
+status=Complete
+update date=1403088044000
+checksum file=3929086477
+title=Car Rental-Car Selection
+revision=1403088044000
+revision timestamp=1403088044000
+[SCRIPT]
+INTERFACE ENTITY	car selection
+interface entity setting	title	Car Rental-Car Selection
+
+	ta name	ta class	caption
+interface element	home	button	Home
+interface element	back	button	Back
+interface element	next	button	Next
+
+	ta name	ta class	caption
+interface element	message	label	{Sorry.*}
+
+	ta name	ta class	description
+interface element	available car	text	Currently available cars
+interface element	total car charge	text	Total car charge
+interface element	car charge per day	text	Car charge per day
+interface element	duration	text	Rental duration(days)
+interface element	number of car	text	Number of car to rent
+
+	ta name	ta class	description
+interface element	car select tree	tree	Tree Car Types

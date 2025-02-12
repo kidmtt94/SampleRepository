@@ -1,0 +1,27 @@
+[SETTINGS]
+creation date=1357555917000
+version=2
+status=New
+update date=1717050235587
+checksum file=320875699
+revision=1717050235661
+1683804521196
+1683802563240
+1359455253995
+1359371936640
+revision timestamp=1717050235661
+[SCRIPT]
+ACTION DEFINITION	config
+
+	setting	value
+setting	webdriver mode	on
+setting	use browser	Edge Chromium
+setting	standard ASCII only	no
+setting	value changed wait	1500
+setting	case sensitive	no
+setting	load invisible controls	yes
+
+	variable	value
+set variable	cf waiting time	20
+set variable	cf username	John
+set variable	cf password	Logigear

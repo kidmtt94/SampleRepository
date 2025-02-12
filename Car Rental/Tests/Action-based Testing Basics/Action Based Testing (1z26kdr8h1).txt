@@ -1,0 +1,130 @@
+[SETTINGS]
+creation date=1282820061000
+version=9
+priority=Immediate
+status=Complete
+run status=Passed
+update date=1401894544000
+description=This sample test module is to give some examples on how Action-Based-Testing test modules would look like.
+checksum file=2133286017
+revision=1401894544984
+1357903917087
+1348051762453
+1347040789750
+1346862700395
+1346179790388
+1344961230314
+1344357777000
+1344356450000
+revision timestamp=1401894544984
+[SCRIPT]
+10m0ribsv=total charge
+10ks7ciu8x=car selection
+11n60wcyka=current window
+11n502gws4=back to home
+10m1awj99v=car
+10n5b2ukis=duration
+11n8dfnakz=last name
+10n52uutcy=close application
+10kzrqfmyh=check number of available cars
+10m15v0t32=get number of available cars
+10m0ko4st9=message
+11n1u2gq3q=last name
+10n57ajeub=select date and location
+10kruc6beo=new order
+10m16mn2h5=return available cars
+10n5b2vxdx=country pickup
+10m0ko3fek=window
+10m1awid2j=rental option
+10krphrvqi=welcome
+10m1awkmjg=number of cars
+10m1a0z7kn=rent car
+10ksq703x9=car select tree
+10n5xk0h14=start application
+10n5b2x91c=return same location
+10m0quvd1g=check total payment
+10kzsos5j5=currently available cars
+10m16mm5s1=car
+10n5md9ftj=login
+10m0jr2gdj=check message
+1b42otp83q=config
+10n52uv9em=window
+10kzsor8n7=car
+10n5b2wcsj=state pickup
+10n5b2wtcs=city pickup
+11n8dfkyav=first name
+TEST MODULE	Action Based Testing
+
+OBJECTIVES
+test objective	TO 01	Invoice total is calculated correctly
+test objective	TO 02	Number of currently available cars is updated after a rental reservation
+test objective	TO 03	An error message is displayed when user tries to rent unavailable car
+
+INITIAL	Setting up
+
+1b42otp83q
+
+10n5xk0h14
+
+10n5md9ftj
+
+TEST CASE	TC 01	Check invoice total for a single reservation
+test objective	TO 01	Invoice total is calculated correctly
+
+	11n8dfkyav	11n8dfnakz	10m1awj99v	10m1awid2j
+10m1a0z7kn	John	Doe	Compact/Toyota Prius	Infant Seat
+
+	11n1u2gq3q	10m0ribsv
+10m0quvd1g	Doe	140.40
+
+TEST CASE	TC 02	Check invoice total for multiple reservations
+test objective	TO 01	Invoice total is calculated correctly
+
+	11n8dfkyav	11n8dfnakz	10m1awj99v	10m1awid2j
+10m1a0z7kn	Peter	Allen	Compact/Toyota Prius	Infant Seat
+10m1a0z7kn	Peter	Allen	Minivan/ Chevrolet Uplander	Child/toddler Seat
+10m1a0z7kn	Peter	Allen	Premium/ Buick LeSabre	Extended Protection
+
+	11n1u2gq3q	10m0ribsv
+10m0quvd1g	Allen	532.33
+
+TEST CASE	TC 03	Check number of currently available cars is updated
+test objective	TO 02	Number of currently available cars is updated after a rental reservation
+
+	10m16mm5s1	10m16mn2h5
+10m15v0t32	Premium/ Buick LeSabre	>> available car
+
+	11n8dfkyav	11n8dfnakz	10m1awj99v	10m1awkmjg
+10m1a0z7kn	John	Smith	Premium/ Buick LeSabre	2
+
+	10kzsor8n7	10kzsos5j5
+10kzrqfmyh	Premium/ Buick LeSabre	# available car - 2
+
+TEST CASE	TC 04	Check warning message is displayed when renting unavailable car
+test objective	TO 03	An error message is displayed when user tries to rent unavailable car
+
+	10m16mm5s1	10m16mn2h5
+10m15v0t32	Minivan/Chevrolet Uplander	>> max available car
+
+	10m1awj99v	10m1awkmjg
+10m1a0z7kn	Minivan/ Chevrolet Uplander	# max available car
+
+	window	control
+click	10krphrvqi	10kruc6beo
+
+	10n5b2ukis	10n5b2vxdx	10n5b2wcsj	10n5b2wtcs	10n5b2x91c
+10n57ajeub	3	United States	California	Los Angeles	yes
+
+	window	tree	node path
+click tree node	10ks7ciu8x	10ksq703x9	Car Types/Minivan/Chevrolet Uplander
+
+	10m0ko3fek	10m0ko4st9
+10m0jr2gdj	car selection	Sorry, no more Chevrolet Uplander in stock
+
+FINAL	Cleaning up
+
+	11n60wcyka
+11n502gws4	car selection
+
+	10n52uv9em
+10n52uutcy	10krphrvqi

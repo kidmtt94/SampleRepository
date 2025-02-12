@@ -1,0 +1,12 @@
+[SETTINGS]
+check out user=10jqkwto0
+check out machine=AGT212340
+creation date=1738822976716
+version=1
+status=New
+update date=1738822976732
+checksum file=3642773151
+revision=1738822976735
+revision timestamp=1738822976735
+[SCRIPT]
+ACTION DEFINITION	hello

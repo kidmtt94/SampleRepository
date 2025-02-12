@@ -1,0 +1,22 @@
+[SETTINGS]
+creation date=1560410873405
+version=3
+status=New
+update date=1561604778942
+title={Scrum Board.*}
+checksum file=2680163123
+revision=1561604778974
+1560410873582
+revision timestamp=1561604778974
+[SCRIPT]
+INTERFACE ENTITY	view card {spanish}
+interface entity setting	title	{Scrum Board.*}
+
+	ta name	ta class	xpath
+interface element	close	button	//button[.='Cerrar']
+
+	ta name	ta class	id
+interface element	view card	span	ui-id-2
+
+	ta name	ta class	xpath
+interface element	card info	table	//table[@class='form']

@@ -1,0 +1,81 @@
+[SETTINGS]
+creation date=1284460323000
+description=Start Music library from Programs file
+version=14
+status=Complete
+update date=1402754524000
+checksum file=3384322585
+revision=1402754524812
+1357903925017
+1348053066451
+1346866193935
+1346146438886
+1342022777000
+1334157392000
+1306854545000
+1306421993000
+1284992408000
+1284807236000
+1284743632000
+1284649981000
+1284460323000
+revision timestamp=1402754524812
+[SCRIPT]
+1st82s94oa=no results
+1st82siw3o=ok
+ACTION DEFINITION	start application
+
+
+section	Close opening window
+
+	window	variable	time out
+does window exist	1st82s94oa	message window	1
+does window exist	[title={.*WPF Example.*}]	main window	1
+
+	condition
+if	# (message window=1) and (main window=1)
+
+	window	control
+click	1st82s94oa	1st82siw3o
+
+	window
+close window	[title={.*WPF Example.*}]
+
+	condition
+else if	# main window=1
+
+	window
+close window	[title={.*WPF Example.*}]
+
+end if
+
+	setting	value
+setting	max show length	1000
+
+	file	variable
+does file exist	C:\Program Files\LogiGear\TestArchitect\samples\music library_wpf\Music Player.exe	i
+does file exist	C:\Program Files (x86)\LogiGear\TestArchitect\samples\music library_wpf\Music Player.exe	i2
+
+	condition
+if	#i=1
+
+	variable	value
+set variable	path	C:\Program Files\LogiGear\TestArchitect\samples\music library_wpf\Music Player.exe
+
+	condition
+else if	#i2=1
+
+	variable	value
+set variable	path	C:\Program Files (x86)\LogiGear\TestArchitect\samples\music library_wpf\Music Player.exe
+
+else
+
+	text
+report error	"The "Music Player" sample application was not installed at its default location. Please open the “start application” high-level action, then correct the file path of your sample application accordingly."
+
+exit test module
+
+end if
+
+	program
+start program	#path

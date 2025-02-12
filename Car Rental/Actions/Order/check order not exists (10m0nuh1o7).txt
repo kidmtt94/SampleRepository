@@ -1,0 +1,42 @@
+[SETTINGS]
+creation date=1282844435000
+version=10
+status=Complete
+update date=1402302247000
+checksum file=398438917
+description=check order does not exist in table order
+rename history=1282907089000	10m0nuh1o7	check order not exists o	check order not exists	axe8xoftqywn	NEW
+revision=1357903917878
+1297331508000
+1297331314000
+1284746823000
+1284665327000
+1282907089000
+1282844493000
+1282844491000
+1282844468000
+1282844435000
+revision timestamp=1357903917878
+[SCRIPT]
+10ktejc8ty=view orders
+10ktxwoxz0=no result found
+10ktxwwyur=search text
+10ktxws1hf=search
+ACTION DEFINITION	check order not exists
+
+	name	default value	description
+argument	current window		The window name
+argument	last name		The last name of customer
+
+
+	window	menu	item
+select menu item	# current window	main menu	File->View Orders
+
+	window	control	value
+enter	10ktejc8ty	10ktxwwyur	# last name
+
+	window	control
+click	10ktejc8ty	10ktxws1hf
+
+	window	control
+check control exists	10ktejc8ty	10ktxwoxz0

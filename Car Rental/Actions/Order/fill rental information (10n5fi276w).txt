@@ -1,0 +1,76 @@
+[SETTINGS]
+creation date=1282904146000
+status=Complete
+update date=1402303890000
+checksum file=757338311
+description=fill rental information 
+version=12
+rename history=1282904254000	10n5fi276w	test	fill rental information	axe8xofl1wtz	NEW
+revision=1402303890605
+1402302846984
+1401889217000
+1357903919469
+1306235151000
+1284737302000
+1284737121000
+1283275919000
+1282904254000
+1282904211000
+1282904164000
+1282904147000
+revision timestamp=1402303890605
+[SCRIPT]
+10kt1q4g9t=membership code
+10kt1q6p9v=driver license
+10kt1qbmk=phone number
+10kt1punm4=adding service list
+10kt1q0f1d=discount counpon
+10kt1qchwj=passport
+10kt1qa9bm=next
+11n96f7xey=last name
+11n96f4tpd=first name
+10kssaf6tk=rental information
+ACTION DEFINITION	fill rental information
+
+
+	name	default value	description
+argument	first name	Susan	the value of first name
+argument	last name	Lee	the value of last name
+argument	driver license	123456	the value of driver license
+argument	passport	<ignore>	the value of passport
+argument	phone number	<ignore>	the value of phone number
+argument	membership code	<ignore>	the value of membership code
+argument	pricing option	<ignore>	Check lowest rate/ I have a discount coupon
+argument	discount	<ignore>	the value of discount coupon
+argument	rental option		Value is for the travel agents only
+
+
+	window	control	value
+enter	10kssaf6tk	11n96f4tpd	# first name
+enter	10kssaf6tk	11n96f7xey	# last name
+enter	10kssaf6tk	10kt1q6p9v	# driver license
+enter	10kssaf6tk	10kt1qchwj	# passport
+enter	10kssaf6tk	10kt1qbmk	# phone number
+enter	10kssaf6tk	10kt1q4g9t	# membership code
+
+	condition
+if	# pricing option= "I have a discount coupon"
+
+	window	control	value
+set	10kssaf6tk	10kt1q0f1d	on
+
+end if
+
+	window	control	value
+enter	10kssaf6tk	10kt1q0f1d	# discount
+
+	condition
+if	# rental option<>""
+
+	window	list	item	value
+set list check	10kssaf6tk	10kt1punm4	# "{.*" & rental option & ".*}"	on
+
+end if
+
+	window	control
+click	10kssaf6tk	10kt1qa9bm

@@ -1,0 +1,27 @@
+[SETTINGS]
+creation date=1560410863428
+version=1
+status=New
+update date=1560410863628
+title={Sign in : Scrum Board.*}
+checksum file=3428854518
+revision=1560410863649
+revision timestamp=1560410863649
+[SCRIPT]
+INTERFACE ENTITY	login
+interface entity setting	title	{Sign in : Scrum Board.*}
+
+	ta name	ta class	xpath
+interface element	spanish	image	//img[@alt='spanish']
+
+	ta name	ta class	name
+interface element	password	input-password	txtPassword
+
+	ta name	ta class	id
+interface element	login	input-submit	btnLogin
+
+	ta name	ta class	name
+interface element	username	input-text	txtUsername
+
+	ta name	ta class	id
+interface element	warning message	td	errMsg

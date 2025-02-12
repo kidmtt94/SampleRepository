@@ -1,0 +1,56 @@
+[SETTINGS]
+check out user=10jqkwto0
+check out machine=AGT212340
+creation date=1738814914551
+version=1
+priority=Medium
+status=New
+run status=Not tested
+update date=1738824939036
+checksum file=1837848658
+revision=1738824939027
+1738824455467
+1738824417154
+1738814914592
+revision timestamp=1738824939027
+[SCRIPT]
+d7l2gku5co7k=/tet/Car Rental
+10jqnrkoxj=/Car Rental
+TEST MODULE	Calculation
+
+OBJECTIVES
+test objective	TO 01	<Enter test objective title>
+
+
+INITIAL	Setting up
+
+
+
+
+TEST CASE	TC 01	<Enter test case title>
+test objective	TO 01	<Enter test objective title>
+
+		9999999
+
+
+	name	filter
+use data set	10jqnrkoxj
+ss					s
+	aa
+
+
+repeat for data set
+
+FINAL	Cleaning up
+//	name
+//run test	/zxc
+	name	filter
+use data set	d7l2gku5co7k
+
+
+
+
+repeat for data set					s
+		s
+
+	s

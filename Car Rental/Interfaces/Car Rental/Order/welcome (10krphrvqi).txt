@@ -1,0 +1,29 @@
+[SETTINGS]
+creation date=1282831001000
+description=Login successfully with valid account, Welcome window will be displayed
+version=4
+status=Complete
+update date=1402304560000
+checksum file=1404282683
+title=Car Rental-Welcome
+revision=1346948362107
+1306250577000
+1306250222000
+1282831006000
+revision timestamp=1346948362107
+[SCRIPT]
+INTERFACE ENTITY	welcome
+interface entity setting	title	Car Rental-Welcome
+
+	ta name	ta class	description
+interface element	view cars	button	View Cars
+interface element	view orders	button	View Orders
+interface element	new order	button	New Order
+
+	ta name	ta class	value
+interface element	lbl view cars	label	View Cars
+interface element	lbl view orders	label	View Orders
+interface element	lbl new order	label	New Order
+
+	ta name	ta class	value
+interface element	main menu	menu bar	FileAbout

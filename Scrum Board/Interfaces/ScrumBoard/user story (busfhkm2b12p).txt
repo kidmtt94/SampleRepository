@@ -1,0 +1,37 @@
+[SETTINGS]
+creation date=1560410867994
+version=2
+status=New
+update date=1560410868111
+title={Scrum Board.*}
+checksum file=2401448813
+revision=1560410868126
+revision timestamp=1560410868126
+[SCRIPT]
+INTERFACE ENTITY	user story
+interface entity setting	title	{Scrum Board.*}
+
+	ta name	ta class	xpath
+interface element	create	span	//span[text()="Create"]
+interface element	cancel	span	//span[text()="Cancel"]
+
+	ta name	ta class	id
+interface element	title	input-text	txtTitle
+interface element	estimate	input-text	txtEstimate
+interface element	spent	input-text	txtSpent
+interface element	assignee	input-text	txtAsignee
+
+	ta name	ta class	id
+interface element	priority	select-one	txtPriority
+interface element	component	select-one	txtComponent
+
+	ta name	ta class	xpath
+interface element	missing title warning	span	//span[contains(@htmlfor,"#txtTitle")]
+interface element	invalid estimate warning	span	//span[contains(@htmlfor,"#txtEstimate")]
+interface element	invalid spent warning	span	//span[contains(@htmlfor,"#txtSpent")]
+
+	ta name	ta class	id
+interface element	description	textarea	txtDescription
+
+	ta name	ta class	xpath
+interface element	update	span	//span[@class="ui-button-text" and text()="Update"]

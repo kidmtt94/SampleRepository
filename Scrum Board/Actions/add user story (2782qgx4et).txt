@@ -1,0 +1,46 @@
+[SETTINGS]
+creation date=1357567244000
+version=2
+status=New
+update date=1359373240000
+checksum file=3229354989
+revision=1359373240339
+1359371922028
+revision timestamp=1359373240339
+[SCRIPT]
+2782s4r1fw=fill in story information
+27826pyzsd=user story
+2782s4vguw=assignee
+2782s4v2n7=spent
+2782s4ua7t=component
+2782s4ty39=priority
+27826q80jj=add user story
+2782s4tkch=description
+27826q62po=scrumboard
+2782s4t4tq=title
+2782s4un78=estimate
+ACTION DEFINITION	add user story
+
+	name	default value	description	type	modifier
+argument	title
+argument	description
+argument	priority			Value Set	Low,High,Medium
+argument	component			Value Set	Function, Database, User Interface
+argument	estimate
+argument	spent
+argument	assignee
+argument	button		User story confirmation button on "New Story" dialog	Value Set	create,cancel
+
+	window	control
+click	27826q62po	27826q80jj
+
+	2782s4t4tq	2782s4tkch	2782s4ty39	2782s4ua7t	2782s4un78	2782s4v2n7	2782s4vguw
+2782s4r1fw	# title	# description	# priority	# component	# estimate	# spent	# assignee
+
+	condition
+if	# button <>"" and button <> "ignore"
+
+	window	control
+click	27826pyzsd	# button
+
+end if

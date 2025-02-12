@@ -1,0 +1,38 @@
+[SETTINGS]
+creation date=1282904397000
+status=Complete
+update date=1402302303000
+checksum file=3999588823
+description=login
+version=10
+rename history=1282904439000	10n5md9ftj	test	login	axe8xoftsout	NEW
+revision=1357903919625
+1334155953000
+1332950691000
+1332950137000
+1299666653000
+1283276143000
+1282904460000
+1282904439000
+1282904422000
+1282904398000
+revision timestamp=1357903919625
+[SCRIPT]
+10krkj2ez7=user name
+10krkj0msh=login
+10kqhphkjf=login
+10krkj3rx2=password
+ACTION DEFINITION	login
+
+
+	name	default value	description
+argument	username	john	The value of username
+argument	password		The value of password
+
+
+	window	control	value
+enter	10kqhphkjf	10krkj2ez7	#username
+enter	10kqhphkjf	10krkj3rx2	#password
+
+	window	control
+click	10kqhphkjf	10krkj0msh
